@@ -1,0 +1,41 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import About from "./pages/About";
+import { useEffect } from "react";
+import ScrollToTop from "./components/ScrollToTop";
+import Collections from "./pages/Collections";
+import CollectionDetail from "./components/CollectionDetails";
+
+
+
+function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation speed
+      once: true,    // animate only once
+    });
+  }, []);
+
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/collections" element={<Collections />} />
+        <Route path="/collections/:collectionName" element={<CollectionDetail />} />
+        <Route path="/blog" element={<div>Blog Page</div>} />
+        <Route path="/contact" element={<div>Contact Page</div>} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
+}
+
+export default App;
