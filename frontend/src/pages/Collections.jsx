@@ -1,55 +1,68 @@
 import { Link } from "react-router-dom";
+import ExperienceSection from "../components/ExperienceSection";
+import Marble from "../assets/CollectionImagesHome/Marble.png"
+import Bookmatch from "../assets/CollectionImagesHome/Bookmatch.jpeg"
+import Onyx from "../assets/CollectionImagesHome/Onyx.png"
+import ExoticGranite from "../assets/CollectionImagesHome/Exotic_Granite.jpeg"
+import Granite from "../assets/CollectionImagesHome/Granite.jpeg"
+import Travertine from "../assets/CollectionImagesHome/Travertine.png"
+import Limestone from "../assets/CollectionImagesHome/Limestone.png"
+import Sandstone from "../assets/CollectionImagesHome/Sandstone.jpeg"
+import Slate from "../assets/CollectionImagesHome/Slate.jpeg"
+import EngineeredMarble from "../assets/CollectionImagesHome/Engineered_Marble.jpeg"
+import Quartz from "../assets/CollectionImagesHome/Quartz.jpeg"
+import Terrazzo from "../assets/CollectionImagesHome/Terrazzo.jpeg"
 
 const Collections = () => {
   const categories = [
     {
-      name: "Marble",
-      img: "https://plus.unsplash.com/premium_photo-1671410372744-989627ea0033?q=80&w=387&auto=format&fit=crop",
-    },
-    {
-      name: "Bookmatch",
-      img: "https://plus.unsplash.com/premium_photo-1706912790323-47f462724b4b?q=80&w=871&auto=format&fit=crop",
-    },
-    {
-      name: "Onyx",
-      img: "https://images.unsplash.com/photo-1616746110036-8af55bd5bd73?q=80&w=387&auto=format&fit=crop",
-    },
-    {
-      name: "Exotic Granite",
-      img: "https://plus.unsplash.com/premium_photo-1700866212043-9cbf5034fb13?q=80&w=387&auto=format&fit=crop",
-    },
-    {
-      name: "Granite",
-      img: "https://images.unsplash.com/photo-1550053808-52a75a05955d?q=80&w=387&auto=format&fit=crop",
-    },
-    {
-      name: "Travertine",
-      img: "https://plus.unsplash.com/premium_photo-1672735005959-e0a46dc39f74?q=80&w=391&auto=format&fit=crop",
-    },
-    {
-      name: "Limestone",
-      img: "https://images.unsplash.com/photo-1593305841991-05c8f49bbec8?q=80&w=889&auto=format&fit=crop",
-    },
-    {
-      name: "Sandstone",
-      img: "https://plus.unsplash.com/premium_photo-1675838735501-2eb9b3c999a8?q=80&w=387&auto=format&fit=crop",
-    },
-    {
-      name: "Slate",
-      img: "https://images.unsplash.com/photo-1651395284328-a77bd96df726?q=80&w=870&auto=format&fit=crop",
-    },
-    {
-      name: "Engineered Marble",
-      img: "https://images.unsplash.com/photo-1632198761400-00497310f848?q=80&w=870&auto=format&fit=crop",
-    },
-    {
-      name: "Quartz",
-      img: "https://plus.unsplash.com/premium_photo-1672178140675-b6f2b7ff78b1?q=80&w=870&auto=format&fit=crop",
-    },
-    {
-      name: "Terrazzo",
-      img: "https://images.unsplash.com/photo-1733085097221-e0f80d73c9d9?q=80&w=870&auto=format&fit=crop",
-    },
+                  name: "Marble",
+                  img: Marble,
+                },
+                {
+                  name: "Bookmatch",
+                  img: Bookmatch,
+                },
+                {
+                  name: "Onyx",
+                  img: Onyx,
+                },
+                {
+                  name: "Exotic Granite",
+                  img: ExoticGranite,
+                },
+                {
+                  name: "Granite",
+                  img: Granite,
+                },
+                {
+                  name: "Travertine",
+                  img: Travertine,
+                },
+                {
+                  name: "Limestone",
+                  img: Limestone,
+                },
+                {
+                  name: "Sandstone",
+                  img: Sandstone,
+                },
+                {
+                  name: "Slate",
+                  img: Slate,
+                },
+                {
+                  name: "Engineered Marble",
+                  img: EngineeredMarble,
+                },
+                {
+                  name: "Quartz",
+                  img: Quartz,
+                },
+                {
+                  name: "Terrazzo",
+                  img: Terrazzo,
+                },
   ];
 
   return (
@@ -84,7 +97,7 @@ const Collections = () => {
             >
               <div
                 className="
-      relative h-48 sm:h-64 md:h-72
+      relative h-72 sm:h-96 md:h-108
       rounded-xl overflow-hidden
       bg-black
       shadow-[0_20px_45px_rgba(0,0,0,0.55)]

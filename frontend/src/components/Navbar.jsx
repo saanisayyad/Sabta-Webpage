@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import Logo from "/Sabta_Logo.png";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,11 +21,10 @@ const Navbar = () => {
         ${isScrolled ? "bg-black/90 backdrop-blur-md" : "bg-transparent"}
       `}
       >
-        <div className="flex items-center justify-between px-4 sm:px-6 py-4">
+        <div className="flex items-center justify-between px-4 sm:px-6">
           {/* Logo */}
           <div className=" text-2xl font-bold">
-            SabtaGranite
-            {/* <img src="/logo.png" alt="logo" className="h-10" /> */}
+            <img src={Logo} alt="logo" className="h-30 my-[-10px]" />
           </div>
 
           {/* Desktop Menu */}

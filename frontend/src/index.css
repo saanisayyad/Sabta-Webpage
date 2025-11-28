@@ -12,7 +12,7 @@ html, body {
   scroll-behavior: smooth;
   background: var(--brand-bg);
   color: var(--brand-accent);   /* ✅ ALL TEXT THIS COLOR */
-  font-family: 'Poppins', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0;
   padding: 0;
 }

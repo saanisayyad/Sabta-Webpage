@@ -8,9 +8,8 @@ import About from "./pages/About";
 import { useEffect } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Collections from "./pages/Collections";
-import CollectionDetail from "./components/CollectionDetails";
-
-
+import CollectionDetail from "./pages/CollectionDetails";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
 
@@ -30,6 +29,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/collections" element={<Collections />} />
         <Route path="/collections/:collectionName" element={<CollectionDetail />} />
+        <Route path="/collections/:collectionName/:productId" element={<ProductDetail />} />
         <Route path="/blog" element={<div>Blog Page</div>} />
         <Route path="/contact" element={<div>Contact Page</div>} />
       </Routes>
