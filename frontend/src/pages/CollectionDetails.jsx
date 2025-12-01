@@ -339,57 +339,58 @@ const CollectionDetail = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {sampleProducts.map((p) => (
-            <div key={p._id} className="group">
-              {/* TITLE ABOVE IMAGE */}
-              <div className="text-center mb-3">
-                {/* NUMBER / CODE */}
-                <p className="text-lg font-semibold tracking-wide ">
-                  {p.code || "8050"}
-                </p>
-                <div
-                  className="w-32 h-px mx-auto my-1 
-     bg-linear-to-r from-transparent via-(--brand-accent) to-transparent"
-                ></div>
-                {/* NAME */}
-                <p className="text-lg font-extrabold uppercase tracking-wide ">
-                  {p.name}
-                </p>
-              </div>
+            <div key={p._id}>
+  {/* TITLE ABOVE IMAGE */}
+  <div className="text-center mb-3">
+    <p className="text-lg font-semibold tracking-wide">
+      {p.code || "8050"}
+    </p>
 
-              {/* TILE IMAGE CARD */}
-              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
-                {/* Image */}
-                <div
-                  className="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${p.image})` }}
-                ></div>
+    <div className="w-32 h-px mx-auto my-1 
+      bg-gradient-to-r from-transparent via-(--brand-accent) to-transparent">
+    </div>
 
-                {/* Dark hover overlay */}
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-all duration-500"></div>
+    <p className="text-lg font-extrabold uppercase tracking-wide">
+      {p.name}
+    </p>
+  </div>
 
-                {/* Hover Details */}
-                <div
-                  className="absolute inset-0 flex flex-col items-center justify-center text-center px-4
+  {/* TILE IMAGE CARD (group moved here) */}
+  <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg group">
+    
+    {/* Image */}
+    <div
+      className="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
+      style={{ backgroundImage: `url(${p.image})` }}
+    ></div>
+
+    {/* Dark hover overlay */}
+    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-all duration-500"></div>
+
+    {/* Hover Details */}
+    <div
+      className="absolute inset-0 flex flex-col items-center justify-center text-center px-4
       opacity-0 translate-y-6 
       group-hover:opacity-100 group-hover:translate-y-0 
       transition-all duration-700 ease-out text-white"
-                >
-                  <h3 className="text-sm sm:text-base font-bold uppercase">
-                    Elegance is Hidden in the Details
-                  </h3>
+    >
+      <h3 className="text-sm sm:text-base font-bold uppercase">
+        Elegance is Hidden in the Details
+      </h3>
 
-                  <div className="h-10 w-px bg-(--brand-accent) my-3"></div>
+      <div className="h-10 w-px bg-(--brand-accent) my-3"></div>
 
-                  <p className="text-xs sm:text-sm leading-relaxed">
-                    Adds strong and characterful elegance with veining details.
-                  </p>
+      <p className="text-xs sm:text-sm leading-relaxed">
+        Adds strong and characterful elegance with veining details.
+      </p>
 
-                  <button className="mt-4 flex items-center gap-2 bg-(--brand-bg) text-(--brand-accent) px-4 py-1 rounded-full font-semibold text-xs sm:text-sm">
-                    VIEW →
-                  </button>
-                </div>
-              </div>
-            </div>
+      <button className="mt-4 flex items-center gap-2 bg-(--brand-bg) text-(--brand-accent) px-4 py-1 rounded-full font-semibold text-xs sm:text-sm">
+        VIEW →
+      </button>
+    </div>
+  </div>
+</div>
+
           ))}
         </div>
       </section>
