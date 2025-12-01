@@ -79,7 +79,7 @@ const Hero = () => {
       {slide.sub}
     </p>
 
-    <button className="mt-5 sm:mt-6 bg-white text-black px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+    <button className="mt-5 sm:mt-6 bg-(--brand-bg) text-(--brand-accent) px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg">
       {slide.button}
     </button>
   </div>
