@@ -79,7 +79,7 @@ const CollectionDetail = () => {
       care: "Care Clean with mild soap or a gentle cleaner. Avoid strong chemicals. Seal periodically to maintain performance and color richness.",
       finishes:
         "Finishes Polished, Leathered, Honed and Flamed (depending on stone type)",
-      background: "ONYX",
+      background: "EXOTIC GRANITE",
     },
     onyx: {
       hero: "https://plus.unsplash.com/premium_photo-1700866212043-9cbf5034fb13?q=80",
@@ -94,7 +94,7 @@ const CollectionDetail = () => {
       care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid acids and abrasive products. Recommended to seal regularly due to its delicate nature.",
       finishes:
         "Finishes Polished and Honed (polished is most popular to enhance translucency)",
-      background: "EXOTIC GRANITE",
+      background: "ONYX",
     },
     granite: {
       hero: "https://images.unsplash.com/photo-1550053808-52a75a05955d?q=80",
@@ -337,7 +337,7 @@ const CollectionDetail = () => {
       <section className="px-6 sm:px-10 md:px-16 lg:px-24 pb-20">
         <h2 className="text-xl sm:text-2xl font-semibold mb-6"></h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {sampleProducts.map((p) => (
             <div key={p._id} className="group">
               {/* TITLE ABOVE IMAGE */}
