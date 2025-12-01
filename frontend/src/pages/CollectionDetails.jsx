@@ -36,126 +36,177 @@ const CollectionDetail = () => {
     loadProducts();
   }, [collectionName, filters]);
 
-  // ALL 12 CATEGORY CONTENT + HERO IMAGES
   const collectionContent = {
     marble: {
       hero: "https://images.unsplash.com/photo-1600573472591-ee6c8e6955d2",
-      heading: "Timeless elegance carved in every surface",
+      heading: "Where Luxury Meets the Art of Nature",
       subheading:
-        "The Marble Series celebrates natural luxury, showcasing flowing veins, soft gradients, and iconic stone patterns.",
+        "Our Natural Marble line celebrates the beauty only nature can create. Every slab is a one-of-a-kind composition of deep veining, refined tone and timeless elegance. These stones bring quiet sophistication to interiors and transform everyday spaces into lasting statements.",
+      heading1: "The Journey of a Stone That Defines Luxury",
       description1:
-        "Known for its unmatched beauty, marble elevates interior spaces through organic artistry and refined texture.Perfect for premium architecture and high-end interiors, it delivers a sense of grandeur that never fades.",
+        "Marble begins its life as limestone, reshaped by heat, pressure and time into a material admired for centuries. Each block is carefully quarried, then cut and finished to reveal the depth and character hidden within. The result is a surface that blends durability with natural artistry.",
+      applications:
+        "Applications Flooring, wall cladding, kitchen tops, islands, bathrooms, staircases, windowsills and feature interiors",
+      care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid acids and reseal when needed.",
+      finishes: "Finishes Polished, Honed and Leathered",
       background: "MARBLE",
     },
-
-    bookmatch: {
+    "marble-bookmatch": {
       hero: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80",
-      heading: "Mirror-crafted elegance through perfect symmetry",
+      heading: "Artistry Created by Nature, Perfected in Pairs",
       subheading:
-        "The Bookmatch Series creates dramatic visuals by pairing natural veins into a unified symmetrical canvas.",
+        "Our Marble Bookmatch series highlights the dramatic symmetry that happens when two adjoining slabs are opened like a book. The result is a striking mirror effect that enhances the stone’s veining, movement and color. These slabs turn walls and feature areas into statement pieces that feel both artistic and timeless.",
+      heading1: "A Natural Masterpiece in Perfect Symmetry",
       description1:
-        "This artistic technique transforms any space into a statement wall of flowing stone geometry.Ideal for luxury lobbies, feature walls, and architectural masterpieces where symmetry defines beauty.",
+        "Bookmatched marble begins with a single block, cut into sequential slabs and placed side by side to create a balanced reflection. This technique brings out the full expression of the stone’s natural patterns, making it ideal for designs that aim for visual impact and refined elegance. Each pair is selected and processed with careful precision to preserve the beauty formed over centuries.",
+      applications:
+        "Applications Feature walls, lobbies, living room backdrops, bathroom walls, shower features, reception areas, fireplaces and artistic installations",
+      care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid acidic products and maintain sealing based on usage.",
+      finishes:
+        "Finishes Polished and Honed (most popular for bookmatch installations)",
       background: "BOOKMATCH",
     },
-
-    onyx: {
+    "exotic-granite": {
       hero: "https://images.unsplash.com/photo-1616746110036-8af55bd5bd73?q=80",
-      heading: "Striking visual illusion of permeable swirls",
+      heading: "Bold Patterns for Designs That Stand Out",
       subheading:
-        "The Onyx Series creates a powerful effect through smooth tonal transitions that mimic natural fluidity.",
+        "Our Exotic Granite range is chosen for its dramatic colors, rare mineral formations and striking movement. These slabs bring a distinctive character to any setting, offering a balance of strength and visual depth. Each piece is naturally formed over millions of years, giving your project a surface that feels unique and unforgettable.",
+      heading1: "A Rare Expression of Nature’s Craft",
       description1:
-        "Inspired by natural Onyx stone, this series reflects elegant translucency and light-reactive textures.A symbol of opulence, Onyx enhances any premium interior with its glowing, luxurious appearance.",
+        "Exotic Granite forms deep within the earth, shaped by intense heat and mineral-rich magma. This slow creation process produces bold veining, vibrant tones and unusual textures found only in select regions around the world. After quarrying, each block is cut and finished to highlight the natural artistry inside, resulting in a surface that is both durable and visually captivating.",
+      applications:
+        "Applications High-end kitchens, countertops, islands, feature walls, bar counters, luxury bathrooms, staircases, outdoor applications and statement décor elements",
+      care: "Care Clean with mild soap or a gentle cleaner. Avoid strong chemicals. Seal periodically to maintain performance and color richness.",
+      finishes:
+        "Finishes Polished, Leathered, Honed and Flamed (depending on stone type)",
       background: "ONYX",
     },
-
-    "exotic-granite": {
+    onyx: {
       hero: "https://plus.unsplash.com/premium_photo-1700866212043-9cbf5034fb13?q=80",
-      heading: "Nature’s artistry in rare expressive patterns",
+      heading: "A Stone That Glows With Natural Luxury",
       subheading:
-        "The Exotic Granite Collection showcases dramatic mineral formations and unique color contrasts.",
+        "Our Onyx collection is known for its translucent beauty, vibrant colors and flowing patterns. Each slab carries a soft glow that elevates interiors with a sense of refinement. When backlit, Onyx transforms into a luminous feature that brings warmth and drama to any space. It’s a material chosen for designs that want to feel artistic and unforgettable.",
+      heading1: "A Stone Formed in Layers of Light and Color",
       description1:
-        "Each slab is a masterpiece formed over millions of years, delivering exceptional durability and visual power.Ideal for luxurious countertops, premium facades, and bold interior accents.",
+        "Onyx is created through layers of mineral deposits built over thousands of years. This slow formation gives it its signature bands, soft tones and crystalline structure. The stone is carefully cut and finished to bring out its natural depth, making it one of the most visually expressive materials used in luxury interiors.",
+      applications:
+        "Applications Backlit walls, reception counters, bathroom vanities, feature panels, bar fronts, decorative elements and premium interior accents",
+      care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid acids and abrasive products. Recommended to seal regularly due to its delicate nature.",
+      finishes:
+        "Finishes Polished and Honed (polished is most popular to enhance translucency)",
       background: "EXOTIC GRANITE",
     },
-
     granite: {
       hero: "https://images.unsplash.com/photo-1550053808-52a75a05955d?q=80",
-      heading: "Enduring strength shaped into timeless design",
+      heading: "Where Strength Meets Natural Beauty",
       subheading:
-        "Granite Series is engineered for resilience, combining natural toughness with modern aesthetics.",
+        "Our Granite selection is known for its durability, distinctive grain patterns and rich mineral colors. Each slab reflects the raw power of the earth, shaped over millions of years. These surfaces bring a bold and confident character to any interior or exterior space while maintaining a refined, timeless look.",
+      heading1: "From Earth’s Core to Timeless Design",
       description1:
-        "A top choice for both indoor and outdoor architectures due to its strength and versatility.Perfect for kitchens, flooring, and high-traffic spaces needing durability with elegance.",
+        "Granite forms deep within the earth’s crust, created by the slow cooling of molten rock. This natural process gives the stone its signature strength and unique crystalline patterns. Once extracted, each block is cut and finished to highlight its natural structure, offering a surface that stands up to heavy use without losing its appeal.",
+      applications:
+        "Applications Flooring, wall cladding, countertops, islands, bathrooms, staircases, outdoor kitchens, facades and high-traffic areas",
+      care: "Care Clean with a soft cloth and mild soap solution. Avoid harsh chemicals. Seal when required for long-term protection.",
+      finishes: "Finishes Polished, Honed, Flamed, Leathered and Bush-Hammered",
       background: "GRANITE",
     },
-
     travertine: {
       hero: "https://plus.unsplash.com/premium_photo-1672735005959-e0a46dc39f74?q=80",
-      heading: "Organic warmth carved from sedimented beauty",
+      heading: "Timeless Texture Inspired by Nature",
       subheading:
-        "The Travertine Series brings earthy textures and natural void patterns reminiscent of ancient architecture.",
+        "Our Travertine range is valued for its warm tones, natural pores and organic movement. Each slab reflects a calm, earthy character that brings a sense of comfort and understated elegance to any space. Whether used in classic or modern settings, Travertine adds a natural charm that never feels out of place.",
+      heading1: "A Stone Formed by Nature’s Flow",
       description1:
-        "Known for its warm tones and antique charm, it creates serene spaces inspired by nature.Perfect for exterior facades, terraces, spa areas, and classical interiors.",
-
+        "Travertine is created from mineral-rich springs, where water movement slowly forms layers of stone over thousands of years. This process gives it its signature porous texture and soft, neutral colors. Once quarried, each slab is shaped and finished to highlight these natural variations, resulting in surfaces that feel both authentic and soothing.",
+      applications:
+        "Applications Flooring, wall cladding, bathrooms, shower walls, outdoor areas, pool decks, façades and feature interiors",
+      care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid acids and keep the stone sealed to protect its natural pores.",
+      finishes: "Finishes Honed, Brushed, Tumbled and Polished",
       background: "TRAVERTINE",
     },
-
     limestone: {
       hero: "https://images.unsplash.com/photo-1593305841991-05c8f49bbec8?q=80",
-      heading: "Soft elegance shaped by natural time",
+      heading: "Natural Elegance for Every Space",
       subheading:
-        "The Limestone Series features subtle grains and warm minimal tones that embody organic simplicity.",
+        "Our Limestone collection is prized for its soft textures, subtle tones, and timeless appeal. Each slab reflects the quiet beauty of nature, offering a versatile surface that complements both classic and contemporary designs. Limestone adds warmth and sophistication to interiors and exteriors alike.",
+      heading1: "A Stone Shaped by Time and Elements",
       description1:
-        "Its soft texture elevates minimalist and contemporary spaces with calm and harmony.Ideal for walls, flooring, and exterior architecture seeking a refined natural look.",
+        "Limestone forms from compacted marine sediments over millions of years, creating a stone with natural texture and gentle tonal variations. Carefully quarried and finished, each slab highlights its unique character, making it perfect for spaces that value understated luxury and natural beauty.",
+      applications:
+        "Applications Flooring, wall cladding, facades, staircases, bathrooms, patios, garden pathways and feature interiors",
+      care: "Care Clean with a soft cloth and pH-neutral solution. Avoid acidic or abrasive cleaners. Seal periodically to maintain longevity and appearance.",
+      finishes: "Finishes Honed, Polished, Brushed and Tumbled",
       background: "LIMESTONE",
     },
-
     sandstone: {
       hero: "https://plus.unsplash.com/premium_photo-1675838735501-2eb9b3c999a8?q=80",
-      heading: "Natural desert hues sculpted by wind and time",
+      heading: "Earthy Beauty for Timeless Designs",
       subheading:
-        "Sandstone Series showcases grainy textures and earthy tones inspired by natural dunes.",
+        "Our Sandstone collection is celebrated for its warm colors, natural texture, and organic appeal. Each slab carries the character of the earth, bringing a rustic yet refined charm to both interiors and exteriors. Sandstone is perfect for creating spaces that feel natural, welcoming, and enduring.",
+      heading1: "A Stone Formed by Nature’s Layers",
       description1:
-        "A versatile stone offering warm aesthetics and rustic character.Perfect for garden areas, pathways, exterior walls, and rustic interior styling.",
+        "Sandstone forms from compacted sand over millions of years, creating a stone with distinctive grain and subtle color variations. Once quarried, each slab is carefully cut and finished to highlight its natural patterns, providing surfaces that are both durable and visually captivating.",
+      applications:
+        "Applications Flooring, wall cladding, patios, garden paths, facades, fireplaces, pool surrounds and feature interiors",
+      care: "Care Clean with a soft cloth or brush and pH-neutral cleaner. Avoid acidic or harsh chemicals. Seal periodically to preserve texture and color.",
+      finishes:
+        "Finishes Natural, Honed, Flamed, Sandblasted and Bush-Hammered",
       background: "SANDSTONE",
     },
-
     slate: {
       hero: "https://images.unsplash.com/photo-1651395284328-a77bd96df726?q=80",
-      heading: "Bold textures formed from ancient layers",
+      heading: "Refined Texture with Natural Strength",
       subheading:
-        "The Slate Series embraces matte finishes and layered mineral structures with deep character.",
+        "Our Slate collection is prized for its layered texture, natural cleft, and deep, earthy tones. Each slab offers a distinctive character that brings elegance and durability to interiors and exteriors. Slate is ideal for spaces that require a sophisticated, yet resilient surface.",
+      heading1: "A Stone Carved by Time",
       description1:
-        "Its dark tones and rugged texture create modern, industrial, and luxurious atmospheres.Ideal for cladding, roofing, and interior walls that need contemporary attitude.",
+        "Slate forms from compressed layers of clay and volcanic ash over millions of years, giving it its unique cleft surface and rich coloration. Each slab is carefully selected, cut, and finished to reveal its natural texture, resulting in surfaces that are both visually appealing and highly durable.",
+      applications:
+        "Applications Flooring, wall cladding, roofing, patios, fireplaces, pool surrounds, garden pathways and feature interiors",
+      care: "Care Clean with a soft brush or cloth and pH-neutral cleaner. Avoid acids and harsh chemicals. Seal periodically for enhanced durability.",
+      finishes: "Finishes Natural Cleft, Honed, Polished, Brushed, Sandblasted",
       background: "SLATE",
     },
-
     "engineered-marble": {
       hero: "https://images.unsplash.com/photo-1632198761400-00497310f848?q=80",
-      heading: "Precision-crafted finesse with marble-like detail",
+      heading: "Luxury with Consistent Perfection",
       subheading:
-        "Engineered Marble offers consistency, durability, and aesthetic perfection.",
+        "Our Engineered Marble collection offers the elegance of natural marble with enhanced durability and consistency. Each slab is crafted using natural stone particles and resin, resulting in a surface that is visually stunning, easy to maintain, and ideal for high-performance spaces. It combines the timeless beauty of marble with modern practicality.",
+      heading1: "Crafted for Beauty and Durability",
       description1:
-        "Created using advanced technology, it blends beauty and strength effortlessly.Best suited for countertops, bathroom interiors, and modern commercial spaces.",
+        "Engineered Marble is produced by blending crushed natural marble with resins and pigments, then curing and polishing the mixture into slabs. This controlled process ensures uniformity in color, veining, and size while maintaining the rich texture and sophistication of natural stone. It is ideal for spaces where both aesthetics and durability are essential.",
+      applications:
+        "Applications Countertops, kitchen islands, bathroom vanities, flooring, wall cladding, staircases, and feature surfaces",
+      care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid harsh chemicals and abrasive materials. Resistant to stains and scratches but periodic sealing is optional for extra protection.",
+      finishes: "Finishes Polished, Honed, and Matte",
       background: "ENGINEERED MARBLE",
     },
-
     quartz: {
       hero: "https://plus.unsplash.com/premium_photo-1672178140675-b6f2b7ff78b1?q=80",
-      heading: "Refined modern surfaces built for longevity",
+      heading: "Strength and Beauty in Perfect Harmony",
       subheading:
-        "The Quartz Series delivers unmatched resilience with uniform textures and clean aesthetics.",
+        "Our Quartz collection offers the elegance of natural stone with unmatched durability and consistency. Made from natural quartz crystals combined with resins and pigments, each slab delivers a flawless, non-porous surface that resists scratches, stains, and heat. Quartz is ideal for both contemporary and classic interiors, offering timeless beauty with practical performance.",
+      heading1: "Engineered for Reliability and Style",
       description1:
-        "Ideal for modern kitchens and workspaces due to its durability and stain resistance.A popular choice for minimalist and contemporary design themes.",
+        "Quartz is an engineered surface crafted by blending natural quartz crystals with resins and pigments, then curing the mixture into durable slabs. This process ensures consistent color, pattern, and thickness, making it highly versatile for design projects. Quartz combines the visual appeal of stone with the benefits of low maintenance and long-lasting durability.",
+      applications:
+        "Applications Kitchen countertops, islands, bathroom vanities, flooring, wall cladding, staircases, and feature surfaces",
+      care: "Care Clean regularly with a soft cloth and mild pH-neutral cleaner. Avoid harsh chemicals or abrasive tools. Quartz does not require sealing.",
+      finishes: "Finishes Polished, Honed, Matte, and Leathered",
       background: "QUARTZ",
     },
-
     terrazzo: {
       hero: "https://images.unsplash.com/photo-1733085097221-e0f80d73c9d9?q=80",
-      heading: "Artistic blend of stone fragments and modern design",
+      heading: "Durable Design Meets Creative Expression",
       subheading:
-        "The Terrazzo Series features expressive chips fused into smooth, contemporary surfaces.",
+        "Our Terrazzo collection combines strength with artistic flair. Made from a blend of natural stone chips, glass, and cement or resin, each slab offers a unique pattern and color composition. Terrazzo brings modern elegance and versatility to interiors, making it perfect for statement floors, feature walls, and custom surfaces.",
+      heading1: "A Surface That Blends Art and Function",
       description1:
-        "It brings vibrant texture and playful design possibilities to all spaces.Ideal for cafes, boutiques, creative studios, and statement flooring.",
+        "Terrazzo is crafted by embedding stone, glass, or other aggregates into a binding matrix, then polished to reveal its intricate composition. This technique allows for endless design possibilities, combining durability with visual appeal. Each slab is finished to enhance its pattern, color depth, and smoothness, offering a long-lasting surface ideal for high-traffic areas.",
+      applications:
+        "Applications Flooring, wall cladding, countertops, feature interiors, staircases, commercial spaces, and decorative installations",
+      care: "Care Clean regularly with a soft cloth or mop and mild pH-neutral cleaner. Avoid harsh acids and abrasive tools. Seal if necessary to maintain finish and longevity.",
+      finishes: "Finishes Polished, Honed, Matte, and Terrazzo Resin Finish",
       background: "TERRAZZO",
     },
   };
@@ -163,88 +214,37 @@ const CollectionDetail = () => {
   const info = collectionContent[collectionName] || {};
 
   const sampleProducts = [
-  {
-    _id: "1",
-    name: "Royal White Marble",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80",
-  },
-  {
-    _id: "2",
-    name: "Italian Grey Onyx",
-    image: "https://images.unsplash.com/photo-1616746110036-8af55bd5bd73?q=80",
-  },
-  {
-    _id: "3",
-    name: "Golden Portoro",
-    image: "https://images.unsplash.com/photo-1550053808-52a75a05955d?q=80",
-  },
-  {
-    _id: "4",
-    name: "Agate Blue Slab",
-    image: "https://images.unsplash.com/photo-1600573472591-ee6c8e6955d2?q=80",
-  },
-  {
-    _id: "5",
-    name: "Brazilian Exotic Granite",
-    image:
-      "https://plus.unsplash.com/premium_photo-1700866212043-9cbf5034fb13?q=80",
-  },
-  {
-    _id: "6",
-    name: "White Travertine",
-    image:
-      "https://plus.unsplash.com/premium_photo-1672735005959-e0a46dc39f74?q=80",
-  },
-  {
-    _id: "7",
-    name: "Black Quartz Crystal",
-    image:
-      "https://plus.unsplash.com/premium_photo-1672178140675-b6f2b7ff78b1?q=80",
-  },
-  {
-    _id: "8",
-    name: "Grey Terrazzo",
-    image:
-      "https://images.unsplash.com/photo-1733085097221-e0f80d73c9d9?q=80",
-  },
-];
-
-const handle3DTilt = (e) => {
-  const card = e.currentTarget;
-
-  // THROTTLE: only update every 50ms
-  if (card.lastUpdate && Date.now() - card.lastUpdate < 50) return;
-  card.lastUpdate = Date.now();
-
-  const rect = card.getBoundingClientRect();
-  const x = e.clientX - rect.left - rect.width / 2;
-  const y = e.clientY - rect.top - rect.height / 2;
-
-  const rotateX = (y / rect.height) * -10;
-  const rotateY = (x / rect.width) * 10;
-
-  card.style.transform = `
-    perspective(900px)
-    rotateX(${rotateX}deg)
-    rotateY(${rotateY}deg)
-    scale(1.04)
-  `;
-};
-
-const resetTilt = (e) => {
-  e.currentTarget.style.transform = `
-    perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)
-  `;
-};
+    {
+      _id: "1",
+      name: "Royal White Marble",
+      image:
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80",
+    },
+    {
+      _id: "2",
+      name: "Italian Grey Onyx",
+      image:
+        "https://images.unsplash.com/photo-1616746110036-8af55bd5bd73?q=80",
+    },
+    {
+      _id: "3",
+      name: "Golden Portoro",
+      image: "https://images.unsplash.com/photo-1550053808-52a75a05955d?q=80",
+    },
+    {
+      _id: "4",
+      name: "Agate Blue Slab",
+      image:
+        "https://images.unsplash.com/photo-1600573472591-ee6c8e6955d2?q=80",
+    },
+  ];
 
   return (
     <div className="w-full">
       {/* HERO SECTION */}
       <section
         className="w-full h-64 sm:h-80 md:h-[380px] bg-center bg-cover relative flex items-center justify-center"
-        style={{
-          backgroundImage: `url("${info.hero}")`,
-        }}
+        style={{ backgroundImage: `url("${info.hero}")` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <h1 className="relative z-10 font-bold text-3xl sm:text-4xl capitalize">
@@ -253,19 +253,21 @@ const resetTilt = (e) => {
       </section>
 
       {/* PREMIUM INTRO SECTION */}
-      <section className="px-6 sm:px-10 md:px-16 lg:px-24 py-20 relative overflow-hidden ">
+      <section className="px-6 sm:px-10 md:px-16 lg:px-24 py-20 relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
           {/* LEFT SIDE */}
           <div>
             <div className="flex items-center gap-4 mb-6">
-              <div className="h-[1px] w-12 bg-gray-400"></div>
+              <div className="h-px w-10 bg-(--brand-accent)"></div>
               <p className="tracking-widest text-gray-500 text-sm">
-                <span className=" font-medium"></span>
-                <span className="font-bold">SABTA GRANITE</span>
+                <span className="font-bold">
+                  Exclusive Collection of{" "}
+                  <span className="capitalize">{title}</span> by SABTA GRANITE
+                </span>
               </p>
             </div>
 
-            <h2 className="text-xl sm:text-2xl md:text-4xl leading-tight mb-6 uppercase tracking-tight text-justify">
+            <h2 className="text-xl sm:text-2xl md:text-4xl leading-tight mb-6 uppercase">
               {info.heading}
             </h2>
 
@@ -275,80 +277,113 @@ const resetTilt = (e) => {
           </div>
 
           {/* RIGHT SIDE */}
-          <div>
-            <p className=" text-sm sm:text-base leading-relaxed text-justify">
+          <div className="space-y-6">
+            <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide">
+              {info.heading1}
+            </h3>
+
+            <p className="text-sm sm:text-base leading-relaxed text-justify">
               {info.description1}
             </p>
 
-            {/* <button className="self-start bg-[#E8D7C5] text-black px-6 py-3 rounded-full shadow-sm hover:shadow-md transition font-semibold tracking-wide">
-              VIEW CATALOG
-            </button> */}
+            <div>
+              <h4 className="text-sm sm:text-base font-semibold uppercase mb-1">
+                Applications
+              </h4>
+              <p className="text-sm sm:text-base leading-relaxed text-justify">
+                {info.applications}
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-sm sm:text-base font-semibold uppercase mb-1">
+                Care
+              </h4>
+              <p className="text-sm sm:text-base leading-relaxed text-justify">
+                {info.care}
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-sm sm:text-base font-semibold uppercase mb-1">
+                Finishes
+              </h4>
+              <p className="text-sm sm:text-base leading-relaxed text-justify">
+                {info.finishes}
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      <section className="">
-        <div class="w-full">
-          <p class="text-9xl font-stretch-ultra-expanded tracking-widest text-center opacity-5 select-none">
+
+      {/* BACKGROUND TEXT */}
+      <section>
+        <div className="w-full">
+          <p className="text-9xl tracking-widest text-center opacity-5 select-none pb-20">
             {info.background}
           </p>
         </div>
       </section>
-      {/* FILTERS */}
-      <section className="py-20 px-6 sm:px-10 md:px-16 lg:px-24">
-        <Filters filters={filters} setFilters={setFilters} />
-      </section>
 
-      {/* PRODUCTS GRID */}
+      {/* PRODUCT GRID WITH HOVER EFFECT */}
       <section className="px-6 sm:px-10 md:px-16 lg:px-24 pb-20">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-6">Products</h2>
-
-        {/* {loading && (
-          <div className="text-center py-20">Loading products...</div>
-        )}
-
-        {!loading && products.length === 0 && (
-          <div className="text-center py-20">
-            No matching products found.
-          </div>
-        )}
+        <h2 className="text-xl sm:text-2xl font-semibold mb-6"></h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {products.map((p) => (
-            <a
-              key={p._id}
-              href={`/collections/${collectionName}/${p._id}`}
-              className="relative h-44 sm:h-56 md:h-64 rounded-lg overflow-hidden shadow-lg group"
-            >
-              <div
-                className="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
-                style={{ backgroundImage: `url(${p.image})` }}
-              ></div>
-
-              <div className="absolute bottom-0 w-full bg-black/70 text-white px-2 py-2">
-                <p className="text-xs sm:text-sm font-medium">{p.name}</p>
+          {sampleProducts.map((p) => (
+            <div key={p._id} className="group">
+              {/* TITLE ABOVE IMAGE */}
+              <div className="text-center mb-3">
+                {/* NUMBER / CODE */}
+                <p className="text-lg font-semibold tracking-wide ">
+                  {p.code || "8050"}
+                </p>
+                <div
+                  className="w-32 h-px mx-auto my-1 
+     bg-linear-to-r from-transparent via-(--brand-accent) to-transparent"
+                ></div>
+                {/* NAME */}
+                <p className="text-lg font-extrabold uppercase tracking-wide ">
+                  {p.name}
+                </p>
               </div>
-            </a>
+
+              {/* TILE IMAGE CARD */}
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg">
+                {/* Image */}
+                <div
+                  className="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${p.image})` }}
+                ></div>
+
+                {/* Dark hover overlay */}
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-all duration-500"></div>
+
+                {/* Hover Details */}
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center text-center px-4
+      opacity-0 translate-y-6 
+      group-hover:opacity-100 group-hover:translate-y-0 
+      transition-all duration-700 ease-out text-white"
+                >
+                  <h3 className="text-sm sm:text-base font-bold uppercase">
+                    Elegance is Hidden in the Details
+                  </h3>
+
+                  <div className="h-10 w-px bg-(--brand-accent) my-3"></div>
+
+                  <p className="text-xs sm:text-sm leading-relaxed">
+                    Adds strong and characterful elegance with veining details.
+                  </p>
+
+                  <button className="mt-4 flex items-center gap-2 bg-(--brand-bg) text-(--brand-accent) px-4 py-1 rounded-full font-semibold text-xs sm:text-sm">
+                    VIEW →
+                  </button>
+                </div>
+              </div>
+            </div>
           ))}
-        </div> */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-  {sampleProducts.map((p) => (
-    <div
-      key={p._id}
-      className="relative h-44 sm:h-56 md:h-64 rounded-lg overflow-hidden shadow-lg group"
-    >
-      <div
-        className="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
-        style={{ backgroundImage: `url(${p.image})` }}
-      ></div>
-
-      {/* Bottom label */}
-      <div className="absolute bottom-0 w-full bg-black/70 text-white px-2 py-2">
-        <p className="text-xs sm:text-sm font-medium">{p.name}</p>
-      </div>
-    </div>
-  ))}
-</div>
-
+        </div>
       </section>
     </div>
   );

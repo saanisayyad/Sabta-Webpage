@@ -20,7 +20,7 @@ const Collections = () => {
                   img: Marble,
                 },
                 {
-                  name: "Bookmatch",
+                  name: "Marble Bookmatch",
                   img: Bookmatch,
                 },
                 {
