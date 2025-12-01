@@ -2,6 +2,18 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { api } from "../api/api";
 import Filters from "../components/Filters";
+import Marble from "../assets/BannerImages/Marble.jpeg"
+import Granite from "../assets/BannerImages/Granite.jpeg"
+import Onyx from "../assets/BannerImages/Onyx.jpeg"
+import Travertine from "../assets/BannerImages/Travertine.jpeg"
+import Limestone from "../assets/BannerImages/Limestone.jpeg"
+import Sandstone from "../assets/BannerImages/Sandstone.jpeg"
+import Slate from "../assets/BannerImages/Slate.jpeg"
+import EngineeredMarble from "../assets/BannerImages/Engineered-Marble.jpeg"
+import Quartz from "../assets/BannerImages/Quartz.jpeg"
+import Terrazzo from "../assets/BannerImages/Terrazzo.jpeg"
+import ExoticGranite from "../assets/BannerImages/Exotic-Granite.jpeg"
+import BookmatchMarble from "../assets/BannerImages/Bookmatch-Marble.jpeg"
 
 const CollectionDetail = () => {
   const { collectionName } = useParams();
@@ -38,7 +50,7 @@ const CollectionDetail = () => {
 
   const collectionContent = {
     marble: {
-      hero: "https://images.unsplash.com/photo-1600573472591-ee6c8e6955d2",
+      hero: Marble,
       heading: "Where Luxury Meets the Art of Nature",
       subheading:
         "Our Natural Marble line celebrates the beauty only nature can create. Every slab is a one-of-a-kind composition of deep veining, refined tone and timeless elegance. These stones bring quiet sophistication to interiors and transform everyday spaces into lasting statements.",
@@ -52,7 +64,7 @@ const CollectionDetail = () => {
       background: "MARBLE",
     },
     "marble-bookmatch": {
-      hero: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80",
+      hero: BookmatchMarble,
       heading: "Artistry Created by Nature, Perfected in Pairs",
       subheading:
         "Our Marble Bookmatch series highlights the dramatic symmetry that happens when two adjoining slabs are opened like a book. The result is a striking mirror effect that enhances the stone’s veining, movement and color. These slabs turn walls and feature areas into statement pieces that feel both artistic and timeless.",
@@ -62,12 +74,11 @@ const CollectionDetail = () => {
       applications:
         "Feature walls, lobbies, living room backdrops, bathroom walls, shower features, reception areas, fireplaces and artistic installations",
       care: "Clean with a soft cloth and pH-neutral cleaner. Avoid acidic products and maintain sealing based on usage.",
-      finishes:
-        "Polished and Honed (most popular for bookmatch installations)",
+      finishes: "Polished and Honed (most popular for bookmatch installations)",
       background: "MARBLE BOOKMATCH",
     },
     "exotic-granite": {
-      hero: "https://images.unsplash.com/photo-1616746110036-8af55bd5bd73?q=80",
+      hero: ExoticGranite,
       heading: "Bold Patterns for Designs That Stand Out",
       subheading:
         "Our Exotic Granite range is chosen for its dramatic colors, rare mineral formations and striking movement. These slabs bring a distinctive character to any setting, offering a balance of strength and visual depth. Each piece is naturally formed over millions of years, giving your project a surface that feels unique and unforgettable.",
@@ -82,7 +93,7 @@ const CollectionDetail = () => {
       background: "EXOTIC GRANITE",
     },
     onyx: {
-      hero: "https://plus.unsplash.com/premium_photo-1700866212043-9cbf5034fb13?q=80",
+      hero: Onyx,
       heading: "A Stone That Glows With Natural Luxury",
       subheading:
         "Our Onyx collection is known for its translucent beauty, vibrant colors and flowing patterns. Each slab carries a soft glow that elevates interiors with a sense of refinement. When backlit, Onyx transforms into a luminous feature that brings warmth and drama to any space. It’s a material chosen for designs that want to feel artistic and unforgettable.",
@@ -97,7 +108,7 @@ const CollectionDetail = () => {
       background: "ONYX",
     },
     granite: {
-      hero: "https://images.unsplash.com/photo-1550053808-52a75a05955d?q=80",
+      hero: ExoticGranite,
       heading: "Where Strength Meets Natural Beauty",
       subheading:
         "Our Granite selection is known for its durability, distinctive grain patterns and rich mineral colors. Each slab reflects the raw power of the earth, shaped over millions of years. These surfaces bring a bold and confident character to any interior or exterior space while maintaining a refined, timeless look.",
@@ -111,7 +122,7 @@ const CollectionDetail = () => {
       background: "GRANITE",
     },
     travertine: {
-      hero: "https://plus.unsplash.com/premium_photo-1672735005959-e0a46dc39f74?q=80",
+      hero: Travertine,
       heading: "Timeless Texture Inspired by Nature",
       subheading:
         "Our Travertine range is valued for its warm tones, natural pores and organic movement. Each slab reflects a calm, earthy character that brings a sense of comfort and understated elegance to any space. Whether used in classic or modern settings, Travertine adds a natural charm that never feels out of place.",
@@ -125,7 +136,7 @@ const CollectionDetail = () => {
       background: "TRAVERTINE",
     },
     limestone: {
-      hero: "https://images.unsplash.com/photo-1593305841991-05c8f49bbec8?q=80",
+      hero: Limestone,
       heading: "Natural Elegance for Every Space",
       subheading:
         "Our Limestone collection is prized for its soft textures, subtle tones, and timeless appeal. Each slab reflects the quiet beauty of nature, offering a versatile surface that complements both classic and contemporary designs. Limestone adds warmth and sophistication to interiors and exteriors alike.",
@@ -139,7 +150,7 @@ const CollectionDetail = () => {
       background: "LIMESTONE",
     },
     sandstone: {
-      hero: "https://plus.unsplash.com/premium_photo-1675838735501-2eb9b3c999a8?q=80",
+      hero: Sandstone,
       heading: "Earthy Beauty for Timeless Designs",
       subheading:
         "Our Sandstone collection is celebrated for its warm colors, natural texture, and organic appeal. Each slab carries the character of the earth, bringing a rustic yet refined charm to both interiors and exteriors. Sandstone is perfect for creating spaces that feel natural, welcoming, and enduring.",
@@ -149,12 +160,11 @@ const CollectionDetail = () => {
       applications:
         "Flooring, wall cladding, patios, garden paths, facades, fireplaces, pool surrounds and feature interiors",
       care: "Clean with a soft cloth or brush and pH-neutral cleaner. Avoid acidic or harsh chemicals. Seal periodically to preserve texture and color.",
-      finishes:
-        "Natural, Honed, Flamed, Sandblasted and Bush-Hammered",
+      finishes: "Natural, Honed, Flamed, Sandblasted and Bush-Hammered",
       background: "SANDSTONE",
     },
     slate: {
-      hero: "https://images.unsplash.com/photo-1651395284328-a77bd96df726?q=80",
+      hero: Slate,
       heading: "Refined Texture with Natural Strength",
       subheading:
         "Our Slate collection is prized for its layered texture, natural cleft, and deep, earthy tones. Each slab offers a distinctive character that brings elegance and durability to interiors and exteriors. Slate is ideal for spaces that require a sophisticated, yet resilient surface.",
@@ -168,7 +178,7 @@ const CollectionDetail = () => {
       background: "SLATE",
     },
     "engineered-marble": {
-      hero: "https://images.unsplash.com/photo-1632198761400-00497310f848?q=80",
+      hero: EngineeredMarble,
       heading: "Luxury with Consistent Perfection",
       subheading:
         "Our Engineered Marble collection offers the elegance of natural marble with enhanced durability and consistency. Each slab is crafted using natural stone particles and resin, resulting in a surface that is visually stunning, easy to maintain, and ideal for high-performance spaces. It combines the timeless beauty of marble with modern practicality.",
@@ -182,7 +192,7 @@ const CollectionDetail = () => {
       background: "ENGINEERED MARBLE",
     },
     quartz: {
-      hero: "https://plus.unsplash.com/premium_photo-1672178140675-b6f2b7ff78b1?q=80",
+      hero: Quartz,
       heading: "Strength and Beauty in Perfect Harmony",
       subheading:
         "Our Quartz collection offers the elegance of natural stone with unmatched durability and consistency. Made from natural quartz crystals combined with resins and pigments, each slab delivers a flawless, non-porous surface that resists scratches, stains, and heat. Quartz is ideal for both contemporary and classic interiors, offering timeless beauty with practical performance.",
@@ -196,7 +206,7 @@ const CollectionDetail = () => {
       background: "QUARTZ",
     },
     terrazzo: {
-      hero: "https://images.unsplash.com/photo-1733085097221-e0f80d73c9d9?q=80",
+      hero: Terrazzo,
       heading: "Durable Design Meets Creative Expression",
       subheading:
         "Our Terrazzo collection combines strength with artistic flair. Made from a blend of natural stone chips, glass, and cement or resin, each slab offers a unique pattern and color composition. Terrazzo brings modern elegance and versatility to interiors, making it perfect for statement floors, feature walls, and custom surfaces.",
@@ -254,19 +264,21 @@ const CollectionDetail = () => {
 
       {/* PREMIUM INTRO SECTION */}
       <section className="px-6 sm:px-10 md:px-16 lg:px-24 py-20 relative overflow-hidden">
+        {/* ⭐ MAIN TITLE - CENTER ⭐ */}
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="h-px w-10 bg-(--brand-accent)"></div>
+            <p className="tracking-widest text-gray-500 text-sm font-bold">
+              Exclusive Collection of{" "}
+              <span className="capitalize">{title}</span> by SABTA GRANITE
+            </p>
+            <div className="h-px w-10 bg-(--brand-accent)"></div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
           {/* LEFT SIDE */}
           <div>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-px w-10 bg-(--brand-accent)"></div>
-              <p className="tracking-widest text-gray-500 text-sm">
-                <span className="font-bold">
-                  Exclusive Collection of{" "}
-                  <span className="capitalize">{title}</span> by SABTA GRANITE
-                </span>
-              </p>
-            </div>
-
             <h2 className="text-xl sm:text-2xl md:text-4xl leading-tight mb-6 uppercase">
               {info.heading}
             </h2>
@@ -277,57 +289,70 @@ const CollectionDetail = () => {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="space-y-6">
-            <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide">
+          <div>
+            {/* SAME STYLE AS LEFT SIDE */}
+            <h3 className="text-xl sm:text-2xl md:text-4xl leading-tight mb-6 uppercase">
               {info.heading1}
             </h3>
 
-            <p className="text-sm sm:text-base leading-relaxed text-justify">
+            <p className="text-lg sm:text-xl font-semibold leading-relaxed text-justify mb-8">
               {info.description1}
             </p>
-
-            <div>
-              <h4 className="text-sm sm:text-base font-semibold uppercase mb-1">
-                Applications
-              </h4>
-              <p className="text-sm sm:text-base leading-relaxed text-justify">
-                {info.applications}
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-sm sm:text-base font-semibold uppercase mb-1">
-                Care
-              </h4>
-              <p className="text-sm sm:text-base leading-relaxed text-justify">
-                {info.care}
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-sm sm:text-base font-semibold uppercase mb-1">
-                Finishes
-              </h4>
-              <p className="text-sm sm:text-base leading-relaxed text-justify">
-                {info.finishes}
-              </p>
-            </div>
           </div>
+        </div>
+      </section>
+      <section>
+        <div
+          className="w-full h-px mx-auto my-1 
+      bg-gradient-to-r from-transparent via-(--brand-accent) to-transparent"
+        ></div>
+      </section>
+      {/* ADDITIONAL INFO SECTION */}
+      <section className="px-6 sm:px-10 md:px-16 lg:px-24 py-20 relative overflow-hidden">
+        {/* Applications */}
+        <div className="mb-6">
+          <h4 className="text-base sm:text-lg font-semibold uppercase mb-1">
+            Applications
+          </h4>
+          <p className="text-sm sm:text-base leading-relaxed text-justify">
+            {info.applications}
+          </p>
+        </div>
+
+        {/* Care */}
+        <div className="mb-6">
+          <h4 className="text-base sm:text-lg font-semibold uppercase mb-1">
+            Care
+          </h4>
+          <p className="text-sm sm:text-base leading-relaxed text-justify">
+            {info.care}
+          </p>
+        </div>
+
+        {/* Finishes */}
+        <div>
+          <h4 className="text-base sm:text-lg font-semibold uppercase mb-1">
+            Finishes
+          </h4>
+          <p className="text-sm sm:text-base leading-relaxed text-justify">
+            {info.finishes}
+          </p>
         </div>
       </section>
 
       {/* BACKGROUND TEXT */}
       <section>
         <div className="w-full">
-          <p className="
+          <p
+            className="
   text-4xl     /* mobile */
   sm:text-6xl  /* small screens */
   md:text-7xl  /* tablets */
   lg:text-8xl  /* laptops */
   xl:text-9xl  /* large screens */
   tracking-widest text-center opacity-5 select-none pb-20
-">
-
+"
+          >
             {info.background}
           </p>
         </div>
@@ -340,57 +365,56 @@ const CollectionDetail = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {sampleProducts.map((p) => (
             <div key={p._id}>
-  {/* TITLE ABOVE IMAGE */}
-  <div className="text-center mb-3">
-    <p className="text-lg font-semibold tracking-wide">
-      {p.code || "8050"}
-    </p>
+              {/* TITLE ABOVE IMAGE */}
+              <div className="text-center mb-3">
+                <p className="text-lg font-semibold tracking-wide">
+                  {p.code || "8050"}
+                </p>
 
-    <div className="w-32 h-px mx-auto my-1 
-      bg-gradient-to-r from-transparent via-(--brand-accent) to-transparent">
-    </div>
+                <div
+                  className="w-32 h-px mx-auto my-1 
+      bg-gradient-to-r from-transparent via-(--brand-accent) to-transparent"
+                ></div>
 
-    <p className="text-lg font-extrabold uppercase tracking-wide">
-      {p.name}
-    </p>
-  </div>
+                <p className="text-lg font-extrabold uppercase tracking-wide">
+                  {p.name}
+                </p>
+              </div>
 
-  {/* TILE IMAGE CARD (group moved here) */}
-  <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg group">
-    
-    {/* Image */}
-    <div
-      className="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
-      style={{ backgroundImage: `url(${p.image})` }}
-    ></div>
+              {/* TILE IMAGE CARD (group moved here) */}
+              <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg group">
+                {/* Image */}
+                <div
+                  className="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${p.image})` }}
+                ></div>
 
-    {/* Dark hover overlay */}
-    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-all duration-500"></div>
+                {/* Dark hover overlay */}
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-all duration-500"></div>
 
-    {/* Hover Details */}
-    <div
-      className="absolute inset-0 flex flex-col items-center justify-center text-center px-4
+                {/* Hover Details */}
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center text-center px-4
       opacity-0 translate-y-6 
       group-hover:opacity-100 group-hover:translate-y-0 
       transition-all duration-700 ease-out text-white"
-    >
-      <h3 className="text-sm sm:text-base font-bold uppercase">
-        Elegance is Hidden in the Details
-      </h3>
+                >
+                  <h3 className="text-sm sm:text-base font-bold uppercase">
+                    Elegance is Hidden in the Details
+                  </h3>
 
-      <div className="h-10 w-px bg-(--brand-accent) my-3"></div>
+                  <div className="h-10 w-px bg-(--brand-accent) my-3"></div>
 
-      <p className="text-xs sm:text-sm leading-relaxed">
-        Adds strong and characterful elegance with veining details.
-      </p>
+                  <p className="text-xs sm:text-sm leading-relaxed">
+                    Adds strong and characterful elegance with veining details.
+                  </p>
 
-      <button className="mt-4 flex items-center gap-2 bg-(--brand-bg) text-(--brand-accent) px-4 py-1 rounded-full font-semibold text-xs sm:text-sm">
-        VIEW →
-      </button>
-    </div>
-  </div>
-</div>
-
+                  <button className="mt-4 flex items-center gap-2 bg-(--brand-bg) text-(--brand-accent) px-4 py-1 rounded-full font-semibold text-xs sm:text-sm">
+                    VIEW →
+                  </button>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </section>
