@@ -46,9 +46,9 @@ const CollectionDetail = () => {
       description1:
         "Marble begins its life as limestone, reshaped by heat, pressure and time into a material admired for centuries. Each block is carefully quarried, then cut and finished to reveal the depth and character hidden within. The result is a surface that blends durability with natural artistry.",
       applications:
-        "Applications Flooring, wall cladding, kitchen tops, islands, bathrooms, staircases, windowsills and feature interiors",
-      care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid acids and reseal when needed.",
-      finishes: "Finishes Polished, Honed and Leathered",
+        "Flooring, wall cladding, kitchen tops, islands, bathrooms, staircases, windowsills and feature interiors",
+      care: "Clean with a soft cloth and pH-neutral cleaner. Avoid acids and reseal when needed.",
+      finishes: "Polished, Honed and Leathered",
       background: "MARBLE",
     },
     "marble-bookmatch": {
@@ -60,10 +60,10 @@ const CollectionDetail = () => {
       description1:
         "Bookmatched marble begins with a single block, cut into sequential slabs and placed side by side to create a balanced reflection. This technique brings out the full expression of the stone’s natural patterns, making it ideal for designs that aim for visual impact and refined elegance. Each pair is selected and processed with careful precision to preserve the beauty formed over centuries.",
       applications:
-        "Applications Feature walls, lobbies, living room backdrops, bathroom walls, shower features, reception areas, fireplaces and artistic installations",
-      care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid acidic products and maintain sealing based on usage.",
+        "Feature walls, lobbies, living room backdrops, bathroom walls, shower features, reception areas, fireplaces and artistic installations",
+      care: "Clean with a soft cloth and pH-neutral cleaner. Avoid acidic products and maintain sealing based on usage.",
       finishes:
-        "Finishes Polished and Honed (most popular for bookmatch installations)",
+        "Polished and Honed (most popular for bookmatch installations)",
       background: "MARBLE BOOKMATCH",
     },
     "exotic-granite": {
@@ -75,10 +75,10 @@ const CollectionDetail = () => {
       description1:
         "Exotic Granite forms deep within the earth, shaped by intense heat and mineral-rich magma. This slow creation process produces bold veining, vibrant tones and unusual textures found only in select regions around the world. After quarrying, each block is cut and finished to highlight the natural artistry inside, resulting in a surface that is both durable and visually captivating.",
       applications:
-        "Applications High-end kitchens, countertops, islands, feature walls, bar counters, luxury bathrooms, staircases, outdoor applications and statement décor elements",
-      care: "Care Clean with mild soap or a gentle cleaner. Avoid strong chemicals. Seal periodically to maintain performance and color richness.",
+        "High-end kitchens, countertops, islands, feature walls, bar counters, luxury bathrooms, staircases, outdoor applications and statement décor elements",
+      care: "Clean with mild soap or a gentle cleaner. Avoid strong chemicals. Seal periodically to maintain performance and color richness.",
       finishes:
-        "Finishes Polished, Leathered, Honed and Flamed (depending on stone type)",
+        "Polished, Leathered, Honed and Flamed (depending on stone type)",
       background: "EXOTIC GRANITE",
     },
     onyx: {
@@ -90,10 +90,10 @@ const CollectionDetail = () => {
       description1:
         "Onyx is created through layers of mineral deposits built over thousands of years. This slow formation gives it its signature bands, soft tones and crystalline structure. The stone is carefully cut and finished to bring out its natural depth, making it one of the most visually expressive materials used in luxury interiors.",
       applications:
-        "Applications Backlit walls, reception counters, bathroom vanities, feature panels, bar fronts, decorative elements and premium interior accents",
-      care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid acids and abrasive products. Recommended to seal regularly due to its delicate nature.",
+        "Backlit walls, reception counters, bathroom vanities, feature panels, bar fronts, decorative elements and premium interior accents",
+      care: "Clean with a soft cloth and pH-neutral cleaner. Avoid acids and abrasive products. Recommended to seal regularly due to its delicate nature.",
       finishes:
-        "Finishes Polished and Honed (polished is most popular to enhance translucency)",
+        "Polished and Honed (polished is most popular to enhance translucency)",
       background: "ONYX",
     },
     granite: {
@@ -105,9 +105,9 @@ const CollectionDetail = () => {
       description1:
         "Granite forms deep within the earth’s crust, created by the slow cooling of molten rock. This natural process gives the stone its signature strength and unique crystalline patterns. Once extracted, each block is cut and finished to highlight its natural structure, offering a surface that stands up to heavy use without losing its appeal.",
       applications:
-        "Applications Flooring, wall cladding, countertops, islands, bathrooms, staircases, outdoor kitchens, facades and high-traffic areas",
-      care: "Care Clean with a soft cloth and mild soap solution. Avoid harsh chemicals. Seal when required for long-term protection.",
-      finishes: "Finishes Polished, Honed, Flamed, Leathered and Bush-Hammered",
+        "Flooring, wall cladding, countertops, islands, bathrooms, staircases, outdoor kitchens, facades and high-traffic areas",
+      care: "Clean with a soft cloth and mild soap solution. Avoid harsh chemicals. Seal when required for long-term protection.",
+      finishes: "Polished, Honed, Flamed, Leathered and Bush-Hammered",
       background: "GRANITE",
     },
     travertine: {
@@ -119,9 +119,9 @@ const CollectionDetail = () => {
       description1:
         "Travertine is created from mineral-rich springs, where water movement slowly forms layers of stone over thousands of years. This process gives it its signature porous texture and soft, neutral colors. Once quarried, each slab is shaped and finished to highlight these natural variations, resulting in surfaces that feel both authentic and soothing.",
       applications:
-        "Applications Flooring, wall cladding, bathrooms, shower walls, outdoor areas, pool decks, façades and feature interiors",
-      care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid acids and keep the stone sealed to protect its natural pores.",
-      finishes: "Finishes Honed, Brushed, Tumbled and Polished",
+        "Flooring, wall cladding, bathrooms, shower walls, outdoor areas, pool decks, façades and feature interiors",
+      care: "Clean with a soft cloth and pH-neutral cleaner. Avoid acids and keep the stone sealed to protect its natural pores.",
+      finishes: "Honed, Brushed, Tumbled and Polished",
       background: "TRAVERTINE",
     },
     limestone: {
@@ -133,9 +133,9 @@ const CollectionDetail = () => {
       description1:
         "Limestone forms from compacted marine sediments over millions of years, creating a stone with natural texture and gentle tonal variations. Carefully quarried and finished, each slab highlights its unique character, making it perfect for spaces that value understated luxury and natural beauty.",
       applications:
-        "Applications Flooring, wall cladding, facades, staircases, bathrooms, patios, garden pathways and feature interiors",
-      care: "Care Clean with a soft cloth and pH-neutral solution. Avoid acidic or abrasive cleaners. Seal periodically to maintain longevity and appearance.",
-      finishes: "Finishes Honed, Polished, Brushed and Tumbled",
+        "Flooring, wall cladding, facades, staircases, bathrooms, patios, garden pathways and feature interiors",
+      care: "Clean with a soft cloth and pH-neutral solution. Avoid acidic or abrasive cleaners. Seal periodically to maintain longevity and appearance.",
+      finishes: "Honed, Polished, Brushed and Tumbled",
       background: "LIMESTONE",
     },
     sandstone: {
@@ -147,10 +147,10 @@ const CollectionDetail = () => {
       description1:
         "Sandstone forms from compacted sand over millions of years, creating a stone with distinctive grain and subtle color variations. Once quarried, each slab is carefully cut and finished to highlight its natural patterns, providing surfaces that are both durable and visually captivating.",
       applications:
-        "Applications Flooring, wall cladding, patios, garden paths, facades, fireplaces, pool surrounds and feature interiors",
-      care: "Care Clean with a soft cloth or brush and pH-neutral cleaner. Avoid acidic or harsh chemicals. Seal periodically to preserve texture and color.",
+        "Flooring, wall cladding, patios, garden paths, facades, fireplaces, pool surrounds and feature interiors",
+      care: "Clean with a soft cloth or brush and pH-neutral cleaner. Avoid acidic or harsh chemicals. Seal periodically to preserve texture and color.",
       finishes:
-        "Finishes Natural, Honed, Flamed, Sandblasted and Bush-Hammered",
+        "Natural, Honed, Flamed, Sandblasted and Bush-Hammered",
       background: "SANDSTONE",
     },
     slate: {
@@ -162,9 +162,9 @@ const CollectionDetail = () => {
       description1:
         "Slate forms from compressed layers of clay and volcanic ash over millions of years, giving it its unique cleft surface and rich coloration. Each slab is carefully selected, cut, and finished to reveal its natural texture, resulting in surfaces that are both visually appealing and highly durable.",
       applications:
-        "Applications Flooring, wall cladding, roofing, patios, fireplaces, pool surrounds, garden pathways and feature interiors",
-      care: "Care Clean with a soft brush or cloth and pH-neutral cleaner. Avoid acids and harsh chemicals. Seal periodically for enhanced durability.",
-      finishes: "Finishes Natural Cleft, Honed, Polished, Brushed, Sandblasted",
+        "Flooring, wall cladding, roofing, patios, fireplaces, pool surrounds, garden pathways and feature interiors",
+      care: "Clean with a soft brush or cloth and pH-neutral cleaner. Avoid acids and harsh chemicals. Seal periodically for enhanced durability.",
+      finishes: "Natural Cleft, Honed, Polished, Brushed, Sandblasted",
       background: "SLATE",
     },
     "engineered-marble": {
@@ -176,9 +176,9 @@ const CollectionDetail = () => {
       description1:
         "Engineered Marble is produced by blending crushed natural marble with resins and pigments, then curing and polishing the mixture into slabs. This controlled process ensures uniformity in color, veining, and size while maintaining the rich texture and sophistication of natural stone. It is ideal for spaces where both aesthetics and durability are essential.",
       applications:
-        "Applications Countertops, kitchen islands, bathroom vanities, flooring, wall cladding, staircases, and feature surfaces",
-      care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid harsh chemicals and abrasive materials. Resistant to stains and scratches but periodic sealing is optional for extra protection.",
-      finishes: "Finishes Polished, Honed, and Matte",
+        "Countertops, kitchen islands, bathroom vanities, flooring, wall cladding, staircases, and feature surfaces",
+      care: "Clean with a soft cloth and pH-neutral cleaner. Avoid harsh chemicals and abrasive materials. Resistant to stains and scratches but periodic sealing is optional for extra protection.",
+      finishes: "Polished, Honed, and Matte",
       background: "ENGINEERED MARBLE",
     },
     quartz: {
@@ -190,9 +190,9 @@ const CollectionDetail = () => {
       description1:
         "Quartz is an engineered surface crafted by blending natural quartz crystals with resins and pigments, then curing the mixture into durable slabs. This process ensures consistent color, pattern, and thickness, making it highly versatile for design projects. Quartz combines the visual appeal of stone with the benefits of low maintenance and long-lasting durability.",
       applications:
-        "Applications Kitchen countertops, islands, bathroom vanities, flooring, wall cladding, staircases, and feature surfaces",
-      care: "Care Clean regularly with a soft cloth and mild pH-neutral cleaner. Avoid harsh chemicals or abrasive tools. Quartz does not require sealing.",
-      finishes: "Finishes Polished, Honed, Matte, and Leathered",
+        "Kitchen countertops, islands, bathroom vanities, flooring, wall cladding, staircases, and feature surfaces",
+      care: "Clean regularly with a soft cloth and mild pH-neutral cleaner. Avoid harsh chemicals or abrasive tools. Quartz does not require sealing.",
+      finishes: "Polished, Honed, Matte, and Leathered",
       background: "QUARTZ",
     },
     terrazzo: {
@@ -204,9 +204,9 @@ const CollectionDetail = () => {
       description1:
         "Terrazzo is crafted by embedding stone, glass, or other aggregates into a binding matrix, then polished to reveal its intricate composition. This technique allows for endless design possibilities, combining durability with visual appeal. Each slab is finished to enhance its pattern, color depth, and smoothness, offering a long-lasting surface ideal for high-traffic areas.",
       applications:
-        "Applications Flooring, wall cladding, countertops, feature interiors, staircases, commercial spaces, and decorative installations",
-      care: "Care Clean regularly with a soft cloth or mop and mild pH-neutral cleaner. Avoid harsh acids and abrasive tools. Seal if necessary to maintain finish and longevity.",
-      finishes: "Finishes Polished, Honed, Matte, and Terrazzo Resin Finish",
+        "Flooring, wall cladding, countertops, feature interiors, staircases, commercial spaces, and decorative installations",
+      care: "Clean regularly with a soft cloth or mop and mild pH-neutral cleaner. Avoid harsh acids and abrasive tools. Seal if necessary to maintain finish and longevity.",
+      finishes: "Polished, Honed, Matte, and Terrazzo Resin Finish",
       background: "TERRAZZO",
     },
   };
