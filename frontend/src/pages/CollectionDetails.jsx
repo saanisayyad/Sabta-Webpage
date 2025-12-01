@@ -64,7 +64,7 @@ const CollectionDetail = () => {
       care: "Care Clean with a soft cloth and pH-neutral cleaner. Avoid acidic products and maintain sealing based on usage.",
       finishes:
         "Finishes Polished and Honed (most popular for bookmatch installations)",
-      background: "BOOKMATCH",
+      background: "MARBLE BOOKMATCH",
     },
     "exotic-granite": {
       hero: "https://images.unsplash.com/photo-1616746110036-8af55bd5bd73?q=80",
@@ -319,7 +319,15 @@ const CollectionDetail = () => {
       {/* BACKGROUND TEXT */}
       <section>
         <div className="w-full">
-          <p className="text-9xl tracking-widest text-center opacity-5 select-none pb-20">
+          <p className="
+  text-4xl     /* mobile */
+  sm:text-6xl  /* small screens */
+  md:text-7xl  /* tablets */
+  lg:text-8xl  /* laptops */
+  xl:text-9xl  /* large screens */
+  tracking-widest text-center opacity-5 select-none pb-20
+">
+
             {info.background}
           </p>
         </div>
