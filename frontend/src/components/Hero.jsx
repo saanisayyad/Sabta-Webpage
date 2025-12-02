@@ -14,25 +14,30 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
+import Marble from "../assets/BannerImages/Marble.jpeg";
+import Granite from "../assets/BannerImages/Granite.jpeg";
+import Quartz from "../assets/BannerImages/Quartz.jpeg";
+
+
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const slides = [
     {
-      img: "https://images.unsplash.com/photo-1763827657709-b1bbc3c4945b?q=80&w=870&auto=format&fit=crop",
-      heading: "Build Your Digital Presence",
+      img: Marble,
+      heading: "Where Nature’s Beauty Meets Expert Craftsmanship",
       sub: "We create modern, high-performing websites.",
       button: "Get Started"
     },
     {
-      img: "https://images.unsplash.com/photo-1763827513396-5917fc6c84f3?q=80&w=870&auto=format&fit=crop",
-      heading: "Grow Your Business",
+      img: Granite,
+      heading: "Premium Marble and Stone Designed to Elevate Your Interiors",
       sub: "Solutions tailored for your brand.",
       button: "View Services"
     },
     {
-      img: "https://images.unsplash.com/photo-1762983870490-63e5ba07105b?q=80&w=870&auto=format&fit=crop",
-      heading: "Trusted by Clients",
+      img: Quartz,
+      heading: "Classic Design and Enduring Strength for Modern Spaces",
       sub: "Delivering quality, speed & results.",
       button: "Contact Us"
     },
@@ -71,17 +76,20 @@ const Hero = () => {
                animate-fade-slide
                text-center md:text-left"
   >
+    <div className="mt-3 text-base sm:text-lg drop-shadow-xl flex items-center gap-3 justify-center md:justify-start mb-5">
+  <div className="h-px w-10 bg-(--brand-accent)"></div>
+  <span className="uppercase">welcome to sabta granite</span>
+</div>
+
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-xl leading-tight">
       {slide.heading}
     </h1>
 
-    <p className="mt-3 text-base sm:text-lg drop-shadow-xl">
-      {slide.sub}
-    </p>
+    
 
-    <button className="mt-5 sm:mt-6 bg-(--brand-bg) text-(--brand-accent) px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg">
+    {/* <button className="mt-5 sm:mt-6 bg-(--brand-bg) text-(--brand-accent) px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg">
       {slide.button}
-    </button>
+    </button> */}
   </div>
 </div>
 

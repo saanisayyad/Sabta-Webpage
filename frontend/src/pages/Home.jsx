@@ -18,6 +18,7 @@ import Slate from "../assets/CollectionImagesHome/Slate.jpeg"
 import EngineeredMarble from "../assets/CollectionImagesHome/Engineered_Marble.jpeg"
 import Quartz from "../assets/CollectionImagesHome/Quartz.jpeg"
 import Terrazzo from "../assets/CollectionImagesHome/Terrazzo.jpeg"
+import MainImage from "../assets/BannerImages/Exotic-Granite.jpeg"
 
 const Home = () => {
   return (
@@ -56,7 +57,7 @@ const Home = () => {
           </div>
           <div>
             <img
-              src="https://plus.unsplash.com/premium_photo-1670076513880-f58e3c377903?q=80&w=718&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={MainImage}
               alt=""
             />
           </div>
@@ -108,51 +109,91 @@ const Home = () => {
     }}
   >
     {[
-      { name: "Marble", img: Marble, link: "/collections/marble" },
-      { name: "Bookmatch", img: Bookmatch, link: "/collections/marble-bookmatch" },
-      { name: "Onyx", img: Onyx, link: "/collections/onyx" },
-      { name: "Exotic Granite", img: ExoticGranite, link: "/collections/exotic-granite" },
-      { name: "Granite", img: Granite, link: "/collections/granite" },
-      { name: "Travertine", img: Travertine, link: "/collections/travertine" },
-      { name: "Limestone", img: Limestone, link: "/collections/limestone" },
-      { name: "Sandstone", img: Sandstone, link: "/collections/sandstone" },
-      { name: "Slate", img: Slate, link: "/collections/slate" },
-      { name: "Engineered Marble", img: EngineeredMarble, link: "/collections/engineered-marble" },
-      { name: "Quartz", img: Quartz, link: "/collections/quartz" },
-      { name: "Terrazzo", img: Terrazzo, link: "/collections/terrazzo" },
+      { name: "Marble", img: Marble, description:"Timeless elegance & natural veining ", link: "/collections/marble" },
+      { name: "Marble Bookmatch", img: Bookmatch, description:"Mirrored beauty, bold design", link: "/collections/marble-bookmatch" },
+      { name: "Onyx", img: Onyx, description:"Luxurious translucency & color depth ", link: "/collections/onyx" },
+      { name: "Exotic Granite", img: ExoticGranite, description:"Rare patterns, vivid character", link: "/collections/exotic-granite" },
+      { name: "Granite", img: Granite, description:"Strength, durability & rich texture", link: "/collections/granite" },
+      { name: "Travertine", img: Travertine, description:"Earthy warmth with classic charm", link: "/collections/travertine" },
+      { name: "Limestone", img: Limestone, description:"Subtle tones, soft elegance", link: "/collections/limestone" },
+      { name: "Sandstone", img: Sandstone, description:"Natural, rustic, warm appeal", link: "/collections/sandstone" },
+      { name: "Slate", img: Slate, description:"Layered texture with rugged style", link: "/collections/slate" },
+      { name: "Engineered Marble", img: EngineeredMarble, description:"Refined finish, cost-effective", link: "/collections/engineered-marble" },
+      { name: "Quartz", img: Quartz, description:"Sleek, durable & low-maintenance", link: "/collections/quartz" },
+      { name: "Terrazzo", img: Terrazzo, description:"Artistic blend of fragments", link: "/collections/terrazzo" },
     ].map((item, index) => (
       <SwiperSlide key={index}>
-        {/* ✅ CLICKABLE LINK WRAPPER */}
-        <Link to={item.link}>
-          <div className="group cursor-pointer rounded-lg overflow-hidden relative h-70">
+  <Link to={item.link}>
+    <div
+      className="
+        relative cursor-pointer h-[420px] rounded-xl overflow-hidden
+        transition-all duration-700
+        transform-gpu
+        perspective-distant
+        group
+      "
+    >
 
-            {/* BLACK GLASS BOTTOM OVERLAY */}
-            <div className="absolute bottom-0 left-0 w-full h-12 bg-black/60 transition-all duration-300"></div>
+      {/* BACKGROUND IMAGE (moves slightly) */}
+      <div
+        className="
+          absolute inset-0
+          transition-transform duration-700 ease-out
+          group-hover:scale-110
+          group-hover:translate-z-[-40px]
+          transform-gpu
+        "
+      >
+        <img
+          src={item.img}
+          alt={item.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
 
-            {/* IMAGE */}
-            <img
-              src={item.img}
-              alt={item.name}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
 
-            {/* GOLD RISING BACKGROUND */}
-            <div
-              className="
-                absolute inset-0 bg-gradient-to-t from-[var(--brand-bg)] to-transparent 
-                opacity-0 group-hover:opacity-100
-                translate-y-full group-hover:translate-y-0
-                transition-all duration-500
-              "
-            ></div>
+      {/* TEXT LAYER (moves more for parallax) */}
+      <div
+        className="
+          absolute top-6 left-6 right-20 text-white z-30
+          transition-transform duration-700 ease-out transform-gpu
+          group-hover:translate-z-[60px] group-hover:-translate-y-2
+        "
+      >
+        <h2 className="text-3xl font-extrabold capitalize leading-tight drop-shadow-lg">
+          {item.name}
+        </h2>
 
-            {/* NAME */}
-            <div className="absolute bottom-0 w-full text-center py-3 text-white font-semibold text-sm sm:text-base">
-              {item.name}
-            </div>
-          </div>
-        </Link>
-      </SwiperSlide>
+        <p className="mt-2 leading-snug drop-shadow-md">
+          {item.description}
+        </p>
+      </div>
+
+      {/* WHOLE CARD TILT EFFECT */}
+      <div
+        className="
+          absolute inset-0 z-50
+          group-hover:rotate-x-6 group-hover:rotate-y-3 group-hover:scale-[1.03]
+          transition-transform duration-700 ease-out transform-gpu
+          pointer-events-none
+        "
+      ></div>
+
+      {/* SHADOW */}
+      <div
+        className="
+          absolute inset-0 rounded-xl
+          group-hover:shadow-2xl group-hover:shadow-black/50
+          transition-shadow duration-700
+          pointer-events-none
+        "
+      ></div>
+    </div>
+  </Link>
+</SwiperSlide>
+
     ))}
   </Swiper>
 </section>
@@ -165,6 +206,7 @@ const Home = () => {
         </h2>
 
         {/* Tiles Grid */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* ✅ Tile 1 */}
           <div

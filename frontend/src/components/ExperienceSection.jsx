@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ParallaxImage from "../assets/BannerImages/Terrazzo.jpeg"
 
 const ExperienceSection = () => {
   const startYear = 2003;
@@ -26,7 +27,7 @@ const ExperienceSection = () => {
       className="w-[90%] mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-20 flex justify-center bg-fixed"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=658&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+          `url(${ParallaxImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
