@@ -1,19 +1,20 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import NotFound from "./NotFound";
 import { useEffect, useState } from "react";
 import { api } from "../api/api";
 import Filters from "../components/Filters";
-import Marble from "../assets/BannerImages/Marble.jpeg"
-import Granite from "../assets/BannerImages/Granite.jpeg"
-import Onyx from "../assets/BannerImages/Onyx.jpeg"
-import Travertine from "../assets/BannerImages/Travertine.jpeg"
-import Limestone from "../assets/BannerImages/Limestone.jpeg"
-import Sandstone from "../assets/BannerImages/Sandstone.jpeg"
-import Slate from "../assets/BannerImages/Slate.jpeg"
-import EngineeredMarble from "../assets/BannerImages/Engineered-Marble.jpeg"
-import Quartz from "../assets/BannerImages/Quartz.jpeg"
-import Terrazzo from "../assets/BannerImages/Terrazzo.jpeg"
-import ExoticGranite from "../assets/BannerImages/Exotic-Granite.jpeg"
-import BookmatchMarble from "../assets/BannerImages/Bookmatch-Marble.jpeg"
+import Marble from "../assets/BannerImages/Marble.jpeg";
+import Granite from "../assets/BannerImages/Granite.jpeg";
+import Onyx from "../assets/BannerImages/Onyx.jpeg";
+import Travertine from "../assets/BannerImages/Travertine.jpeg";
+import Limestone from "../assets/BannerImages/Limestone.jpeg";
+import Sandstone from "../assets/BannerImages/Sandstone.jpeg";
+import Slate from "../assets/BannerImages/Slate.jpeg";
+import EngineeredMarble from "../assets/BannerImages/Engineered-Marble.jpeg";
+import Quartz from "../assets/BannerImages/Quartz.jpeg";
+import Terrazzo from "../assets/BannerImages/Terrazzo.jpeg";
+import ExoticGranite from "../assets/BannerImages/Exotic-Granite.jpeg";
+import BookmatchMarble from "../assets/BannerImages/Bookmatch-Marble.jpeg";
 
 const CollectionDetail = () => {
   const { collectionName } = useParams();
@@ -108,7 +109,7 @@ const CollectionDetail = () => {
       background: "ONYX",
     },
     granite: {
-      hero: ExoticGranite,
+      hero: Granite,
       heading: "Where Strength Meets Natural Beauty",
       subheading:
         "Our Granite selection is known for its durability, distinctive grain patterns and rich mineral colors. Each slab reflects the raw power of the earth, shaped over millions of years. These surfaces bring a bold and confident character to any interior or exterior space while maintaining a refined, timeless look.",
@@ -222,6 +223,11 @@ const CollectionDetail = () => {
   };
 
   const info = collectionContent[collectionName] || {};
+  // ❌ If invalid collection, return 404 page
+if (!collectionContent[collectionName]) {
+  return <NotFound />;
+}
+
 
   const sampleProducts = [
     {
@@ -253,13 +259,39 @@ const CollectionDetail = () => {
     <div className="w-full">
       {/* HERO SECTION */}
       <section
-        className="w-full h-64 sm:h-80 md:h-[380px] bg-center bg-cover relative flex items-center justify-center"
+        className="w-full h-64 sm:h-80 md:h-[380px] bg-center bg-cover relative flex flex-col items-center justify-center text-white"
         style={{ backgroundImage: `url("${info.hero}")` }}
       >
+        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
-        <h1 className="relative z-10 font-bold text-3xl sm:text-4xl capitalize">
+
+        {/* TITLE */}
+        <h1 className="relative z-10 font-bold text-3xl sm:text-4xl uppercase tracking-wide drop-shadow-lg">
           {title} Series
         </h1>
+
+        {/* BREADCRUMB */}
+        <p className="relative z-10 mt-5 text-sm sm:text-base bg-(--brand-bg) flex gap-2 px-3 py-1 rounded">
+          <Link
+            to="/"
+            className="hover:opacity-100 transition-opacity cursor-pointer"
+          >
+            <span className="hover:opacity-100 transition-opacity cursor-pointer">
+              Home
+            </span>
+          </Link>
+          <span>/</span>
+          <Link
+            to="/collections"
+            className="hover:opacity-100 transition-opacity cursor-pointer"
+          >
+            <span className="hover:opacity-100 transition-opacity cursor-pointer">
+              Collections
+            </span>
+          </Link>
+          <span>/</span>
+          <span className="capitalize text-(--brand-accent)">{title}</span>
+        </p>
       </section>
 
       {/* PREMIUM INTRO SECTION */}
@@ -268,7 +300,7 @@ const CollectionDetail = () => {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-10 bg-(--brand-accent)"></div>
-            <p className="tracking-widest text-gray-500 text-sm font-bold">
+            <p className="tracking-widest  text-sm font-bold">
               Exclusive Collection of{" "}
               <span className="capitalize">{title}</span> by SABTA GRANITE
             </p>
@@ -304,7 +336,7 @@ const CollectionDetail = () => {
       <section>
         <div
           className="w-full h-px mx-auto my-1 
-      bg-gradient-to-r from-transparent via-(--brand-accent) to-transparent"
+      bg-linear-to-r from-transparent via-(--brand-accent) to-transparent"
         ></div>
       </section>
       {/* ADDITIONAL INFO SECTION */}
@@ -373,7 +405,7 @@ const CollectionDetail = () => {
 
                 <div
                   className="w-32 h-px mx-auto my-1 
-      bg-gradient-to-r from-transparent via-(--brand-accent) to-transparent"
+      bg-linear-to-r from-transparent via-(--brand-accent) to-transparent"
                 ></div>
 
                 <p className="text-lg font-extrabold uppercase tracking-wide">
@@ -381,23 +413,40 @@ const CollectionDetail = () => {
                 </p>
               </div>
 
-              {/* TILE IMAGE CARD (group moved here) */}
+              {/* TILE IMAGE CARD */}
               <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg group">
-                {/* Image */}
+                {/* IMAGE */}
                 <div
                   className="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
                   style={{ backgroundImage: `url(${p.image})` }}
                 ></div>
 
-                {/* Dark hover overlay */}
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-all duration-500"></div>
-
-                {/* Hover Details */}
+                {/* OVERLAY */}
                 <div
-                  className="absolute inset-0 flex flex-col items-center justify-center text-center px-4
-      opacity-0 translate-y-6 
-      group-hover:opacity-100 group-hover:translate-y-0 
-      transition-all duration-700 ease-out text-white"
+                  className="
+        absolute inset-0 
+        bg-black/30            /* MOBILE: always slightly dark */
+        md:bg-black/10         /* DESKTOP: default light */
+        md:group-hover:bg-black/60 
+        transition-all duration-500
+      "
+                ></div>
+
+                {/* DETAILS */}
+                <div
+                  className="
+        absolute inset-0 flex flex-col items-center justify-center text-center px-4
+        text-white
+
+        /* MOBILE ALWAYS VISIBLE */
+        opacity-100 translate-y-0
+
+        /* DESKTOP: reveal on hover */
+        md:opacity-0 md:translate-y-6
+        md:group-hover:opacity-100 md:group-hover:translate-y-0
+
+        transition-all duration-700 ease-out
+      "
                 >
                   <h3 className="text-sm sm:text-base font-bold uppercase">
                     Elegance is Hidden in the Details

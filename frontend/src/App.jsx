@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Collections from "./pages/Collections";
 import CollectionDetail from "./pages/CollectionDetails";
 import ProductDetail from "./pages/ProductDetail";
+import NotFound from "./pages/NotFound";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/collections/:collectionName/:productId" element={<ProductDetail />} />
         <Route path="/blog" element={<div>Blog Page</div>} />
         <Route path="/contact" element={<div>Contact Page</div>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

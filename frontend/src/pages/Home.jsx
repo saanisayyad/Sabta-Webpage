@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, A11y } from "swiper/modules";
@@ -84,115 +85,78 @@ const Home = () => {
       </section>
         {/* ✅ COLLECTIONS CAROUSEL */}
       <section data-aos="fade-up" className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-12">
-        <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8">
-          Our Collections
-        </h2>
+  <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8">
+    Our Collections
+  </h2>
 
-        <Swiper
-          modules={[Autoplay, Pagination, A11y]}
-          spaceBetween={16}
-          loop={true}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-            reverseDirection: false,
-            pauseOnMouseEnter: true,
-          }}
-          speed={4000}
-          slidesPerView={2}
-          breakpoints={{
-            640: { slidesPerView: 3 },
-            768: { slidesPerView: 4 },
-            1024: { slidesPerView: 5 },
-          }}
-        >
-          {[
-            {
-              name: "Marble",
-              img: Marble,
-            },
-            {
-              name: "Bookmatch",
-              img: Bookmatch,
-            },
-            {
-              name: "Onyx",
-              img: Onyx,
-            },
-            {
-              name: "Exotic Granite",
-              img: ExoticGranite,
-            },
-            {
-              name: "Granite",
-              img: Granite,
-            },
-            {
-              name: "Travertine",
-              img: Travertine,
-            },
-            {
-              name: "Limestone",
-              img: Limestone,
-            },
-            {
-              name: "Sandstone",
-              img: Sandstone,
-            },
-            {
-              name: "Slate",
-              img: Slate,
-            },
-            {
-              name: "Engineered Marble",
-              img: EngineeredMarble,
-            },
-            {
-              name: "Quartz",
-              img: Quartz,
-            },
-            {
-              name: "Terrazzo",
-              img: Terrazzo,
-            },
-          ].map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="group cursor-pointer rounded-lg overflow-hidden relative h-70">
-                {/* ✅ BLACK GLASS BOTTOM OVERLAY */}
-                <div
-                  className="
-                        absolute bottom-0 left-0 w-full h-12
-                        bg-black/60
-                        transition-all duration-300
-                        "
-                ></div>
+  <Swiper
+    modules={[Autoplay, Pagination, A11y]}
+    spaceBetween={16}
+    loop={true}
+    autoplay={{
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: false,
+      pauseOnMouseEnter: true,
+    }}
+    speed={4000}
+    slidesPerView={2}
+    breakpoints={{
+      640: { slidesPerView: 3 },
+      768: { slidesPerView: 4 },
+      1024: { slidesPerView: 5 },
+    }}
+  >
+    {[
+      { name: "Marble", img: Marble, link: "/collections/marble" },
+      { name: "Bookmatch", img: Bookmatch, link: "/collections/marble-bookmatch" },
+      { name: "Onyx", img: Onyx, link: "/collections/onyx" },
+      { name: "Exotic Granite", img: ExoticGranite, link: "/collections/exotic-granite" },
+      { name: "Granite", img: Granite, link: "/collections/granite" },
+      { name: "Travertine", img: Travertine, link: "/collections/travertine" },
+      { name: "Limestone", img: Limestone, link: "/collections/limestone" },
+      { name: "Sandstone", img: Sandstone, link: "/collections/sandstone" },
+      { name: "Slate", img: Slate, link: "/collections/slate" },
+      { name: "Engineered Marble", img: EngineeredMarble, link: "/collections/engineered-marble" },
+      { name: "Quartz", img: Quartz, link: "/collections/quartz" },
+      { name: "Terrazzo", img: Terrazzo, link: "/collections/terrazzo" },
+    ].map((item, index) => (
+      <SwiperSlide key={index}>
+        {/* ✅ CLICKABLE LINK WRAPPER */}
+        <Link to={item.link}>
+          <div className="group cursor-pointer rounded-lg overflow-hidden relative h-70">
 
-                {/* ✅ FULL IMAGE */}
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+            {/* BLACK GLASS BOTTOM OVERLAY */}
+            <div className="absolute bottom-0 left-0 w-full h-12 bg-black/60 transition-all duration-300"></div>
 
-                {/* ✅ GOLD RISING BACKGROUND */}
-                <div
-                  className="
-            absolute inset-0 bg-gradient-to-t from-[var(--brand-bg)] to-transparent 
-            opacity-0 group-hover:opacity-100
-            translate-y-full group-hover:translate-y-0
-            transition-all duration-500
-          "
-                ></div>
+            {/* IMAGE */}
+            <img
+              src={item.img}
+              alt={item.name}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
 
-                {/* ✅ NAME */}
-                <div className="absolute bottom-0 w-full text-center py-3 text-white font-semibold text-sm sm:text-base">
-                  {item.name}
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </section>
+            {/* GOLD RISING BACKGROUND */}
+            <div
+              className="
+                absolute inset-0 bg-gradient-to-t from-[var(--brand-bg)] to-transparent 
+                opacity-0 group-hover:opacity-100
+                translate-y-full group-hover:translate-y-0
+                transition-all duration-500
+              "
+            ></div>
+
+            {/* NAME */}
+            <div className="absolute bottom-0 w-full text-center py-3 text-white font-semibold text-sm sm:text-base">
+              {item.name}
+            </div>
+          </div>
+        </Link>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</section>
+
       {/* ✅ WHY CHOOSE SABTA SECTION */}
       <section data-aos="fade-up" className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-16">
         {/* Heading */}
