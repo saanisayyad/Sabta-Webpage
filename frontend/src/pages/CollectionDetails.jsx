@@ -15,6 +15,24 @@ import Quartz from "../assets/BannerImages/Quartz.jpeg";
 import Terrazzo from "../assets/BannerImages/Terrazzo.jpeg";
 import ExoticGranite from "../assets/BannerImages/Exotic-Granite.jpeg";
 import BookmatchMarble from "../assets/BannerImages/Bookmatch-Marble.jpeg";
+import Marble1 from "../assets/Marble/Marble1.jpeg";
+import Marble2 from "../assets/Marble/Marble2.jpeg";
+import Marble3 from "../assets/Marble/Marble3.jpeg";
+import Marble4 from "../assets/Marble/Marble4.jpeg";
+import Marble5 from "../assets/Marble/Marble5.jpeg";
+import Marble6 from "../assets/Marble/Marble6.jpeg";
+import Marble7 from "../assets/Marble/Marble7.jpeg";
+import Marble8 from "../assets/Marble/Marble8.jpeg";
+import Marble9 from "../assets/Marble/Marble9.jpeg";
+import Marble10 from "../assets/Marble/Marble10.jpeg";
+import Marble11 from "../assets/Marble/Marble11.jpeg";
+import Marble12 from "../assets/Marble/Marble12.jpeg";
+import Marble13 from "../assets/Marble/Marble13.jpeg";
+import Marble14 from "../assets/Marble/Marble14.jpeg";
+import Marble15 from "../assets/Marble/Marble15.jpeg";
+import Marble16 from "../assets/Marble/Marble16.jpeg";
+import Marble17 from "../assets/Marble/Marble17.jpeg";
+import Marble18 from "../assets/Marble/Marble18.jpeg";
 
 const CollectionDetail = () => {
   const { collectionName } = useParams();
@@ -224,34 +242,90 @@ const CollectionDetail = () => {
 
   const info = collectionContent[collectionName] || {};
   // ❌ If invalid collection, return 404 page
-if (!collectionContent[collectionName]) {
-  return <NotFound />;
-}
-
+  if (!collectionContent[collectionName]) {
+    return <NotFound />;
+  }
 
   const sampleProducts = [
     {
       _id: "1",
       name: "Royal White Marble",
       image:
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80",
+        Marble1,
     },
     {
       _id: "2",
       name: "Italian Grey Onyx",
       image:
-        "https://images.unsplash.com/photo-1616746110036-8af55bd5bd73?q=80",
+        Marble2,
     },
     {
       _id: "3",
       name: "Golden Portoro",
-      image: "https://images.unsplash.com/photo-1550053808-52a75a05955d?q=80",
+      image: Marble3,
     },
     {
       _id: "4",
       name: "Agate Blue Slab",
-      image:
-        "https://images.unsplash.com/photo-1600573472591-ee6c8e6955d2?q=80",
+      image: Marble4,
+    },
+    {
+      _id: "5",
+      name: "Arabescato Marble",  
+      image: Marble5,
+    },
+    {
+      _id: "6",
+      name: "Alaska Marble",  
+      image: Marble6,
+    },{
+      _id: "7",
+      name: "Ukraine Marble",  
+      image: Marble7,
+    },{
+      _id: "8",
+      name: "Arabic Marble",  
+      image: Marble8,
+    },{
+      _id: "9",
+      name: "Indian Marble",  
+      image: Marble9,
+    },{
+      _id: "10",
+      name: "USA Marble",  
+      image: Marble10,
+    },{
+      _id: "11",
+      name: "Arabescato Marble",  
+      image: Marble11,
+    },{
+      _id: "12",
+      name: "Arabescato Marble",  
+      image: Marble12,
+    },{
+      _id: "13",
+      name: "Arabescato Marble",  
+      image: Marble13,
+    },{
+      _id: "14",
+      name: "Arabescato Marble",  
+      image: Marble14,
+    },{
+      _id: "15",
+      name: "Arabescato Marble",  
+      image: Marble15,
+    },{
+      _id: "16",
+      name: "Arabescato Marble",  
+      image: Marble16,
+    },{
+      _id: "17",
+      name: "Arabescato Marble",  
+      image: Marble17,
+    },{
+      _id: "18",
+      name: "Arabescato Marble",  
+      image: Marble18,
     },
   ];
 
@@ -391,13 +465,12 @@ if (!collectionContent[collectionName]) {
       </section>
 
       {/* PRODUCT GRID WITH HOVER EFFECT */}
-      <section className="px-6 sm:px-10 md:px-16 lg:px-24 pb-20">
+      <section className="px-6 sm:px-10 md:px-16 lg:px-20 pb-20">
         <h2 className="text-xl sm:text-2xl font-semibold mb-6"></h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-x-6 gap-y-20">
           {sampleProducts.map((p) => (
             <div key={p._id} className="mx-auto w-full max-w-[230px]">
-
               {/* TITLE ABOVE IMAGE */}
               <div className="text-center mb-3">
                 <p className="text-lg font-semibold tracking-wide">
@@ -437,7 +510,7 @@ if (!collectionContent[collectionName]) {
                 <div
                   className="
         absolute inset-0 flex flex-col items-center justify-center text-center px-4
-        text-white
+       
 
         /* MOBILE ALWAYS VISIBLE */
         opacity-100 translate-y-0

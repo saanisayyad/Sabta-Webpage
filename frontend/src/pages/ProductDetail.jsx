@@ -6,6 +6,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { api } from "../api/api";
 import ImageSlider from "../components/ImageSlider";
+import ProductPageImage from "../assets/ProductImages/ProductPageImage.jpeg";
+import ProductLastImage from "../assets/ProductImages/ProductLastImage.jpeg";
+
+
 
 const CollectionDetail = () => {
   const { collectionName } = useParams();
@@ -22,11 +26,6 @@ const CollectionDetail = () => {
     finish: "",
   });
 
-  const images = [
-    "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=327&auto=format",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80",
-    "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=870&auto=format&fit=crop"
-  ];
 
   const loadProducts = async () => {
     try {
@@ -53,7 +52,7 @@ const CollectionDetail = () => {
     name: "CREMA MARFIL",
     description:
       "Crema Marfil is a refined stone surface known for its soft beige tones, delicate veining and timeless elegance — perfect for luxury interior spaces.",
-    hero: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80",
+    hero: ProductPageImage,
   };
 
   const stoneProperties = {
@@ -144,7 +143,7 @@ const CollectionDetail = () => {
 
           <div className="md:col-span-7 flex justify-center">
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80"
+              src={ProductLastImage}
               className="w-full h-64 sm:h-80 md:h-[360px] lg:h-[416px] object-cover rounded-lg shadow-xl"
             />
           </div>

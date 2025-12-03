@@ -4,12 +4,19 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { RxDoubleArrowRight, RxDoubleArrowLeft } from "react-icons/rx";
+import Slab1 from "../assets/ProductImages/Slab1.jpeg";
+import Slab2 from "../assets/ProductImages/Slab2.jpeg";
+import Slab3 from "../assets/ProductImages/Slab3.jpeg";
+import Slab4 from "../assets/ProductImages/Slab4.jpeg";
+import Slab5 from "../assets/ProductImages/Slab5.jpeg";
 
 const ImageSlider = () => {
   const images = [
-    "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80",
-    "https://plus.unsplash.com/premium_photo-1678074057896-eee996d4a23e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80",
+    Slab1,
+    Slab2,
+    Slab3,
+    Slab4,
+    Slab5
   ];
 
   const [popupOpen, setPopupOpen] = useState(false);
