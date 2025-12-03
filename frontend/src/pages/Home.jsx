@@ -64,26 +64,44 @@ const Home = () => {
         </div>
       </section>
       {/* ✅ COMPACT POINTS LIST */}
-      <section data-aos="fade-up" className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-8">
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-y-2 gap-x-6 text-sm sm:text-base leading-snug">
-          <li>• Natural Beauty Preserved</li>
-          <li>• Geological Elegance</li>
-          <li>• Luxury Marble Selection</li>
-          <li>• Exotic Granite Collection</li>
-          <li>• Bookmatch Designs</li>
-          <li>• Engineered Marble Solutions</li>
-          <li>• Quality Beyond Expectations</li>
-          <li>• Premium Quartz Surfaces</li>
-          <li>• Terrazzo Collections for Modern Interiors</li>
-          <li>• Unmatched Variety and Premium Finishes</li>
-          <li>• Trusted Stone Supplier in UAE</li>
-          <li>• Fast Delivery and Installation Support</li>
-          <li>
-            • Materials Suitable for Villas, Hotels, Retail, Hospitality &
-            Commercial Projects
-          </li>
-        </ul>
-      </section>
+      <section
+  data-aos="fade-up"
+  className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-8"
+>
+  <ul
+    className="
+      list-disc 
+      pl-5
+      grid 
+      grid-cols-1 
+      md:grid-cols-3 
+      lg:grid-cols-4 
+      gap-y-2 
+      gap-x-6 
+      text-sm 
+      sm:text-base 
+      leading-snug
+    "
+  >
+    <li>Natural Beauty Preserved</li>
+    <li>Geological Elegance</li>
+    <li>Luxury Marble Selection</li>
+    <li>Exotic Granite Collection</li>
+    <li>Bookmatch Designs</li>
+    <li>Engineered Marble Solutions</li>
+    <li>Quality Beyond Expectations</li>
+    <li>Premium Quartz Surfaces</li>
+    <li>Terrazzo Collections for Modern Interiors</li>
+    <li>Unmatched Variety and Premium Finishes</li>
+    <li>Trusted Stone Supplier in UAE</li>
+    <li>Fast Delivery and Installation Support</li>
+    <li>
+      Materials Suitable for Villas, Hotels, Retail, Hospitality & Commercial
+      Projects
+    </li>
+  </ul>
+</section>
+
         {/* ✅ COLLECTIONS CAROUSEL */}
       <section data-aos="fade-up" className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-12">
   <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8">

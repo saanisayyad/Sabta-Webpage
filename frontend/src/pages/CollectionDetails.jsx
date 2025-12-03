@@ -396,7 +396,8 @@ if (!collectionContent[collectionName]) {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {sampleProducts.map((p) => (
-            <div key={p._id}>
+            <div key={p._id} className="mx-auto w-full max-w-[230px]">
+
               {/* TITLE ABOVE IMAGE */}
               <div className="text-center mb-3">
                 <p className="text-lg font-semibold tracking-wide">

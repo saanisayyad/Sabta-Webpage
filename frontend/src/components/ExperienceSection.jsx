@@ -24,14 +24,16 @@ const ExperienceSection = () => {
 
   return (
     <section
-      className="w-[90%] mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-20 flex justify-center bg-fixed"
-      style={{
-        backgroundImage:
-          `url(${ParallaxImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+  className="w-[90%] mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-20 flex justify-center
+    bg-[length:cover] bg-center
+    md:bg-fixed   /* Parallax only on md+ screens */
+    bg-scroll     /* Default scroll on mobile */
+  "
+  style={{
+    backgroundImage: `url(${ParallaxImage})`,
+  }}
+>
+
       <div
         className="
           w-full max-w-4xl

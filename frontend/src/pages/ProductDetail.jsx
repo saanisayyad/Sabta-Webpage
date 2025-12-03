@@ -5,6 +5,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { api } from "../api/api";
+import ImageSlider from "../components/ImageSlider";
 
 const CollectionDetail = () => {
   const { collectionName } = useParams();
@@ -12,6 +13,9 @@ const CollectionDetail = () => {
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  
+  const [popupImage, setPopupImage] = useState(null);
+
 
   const [filters, setFilters] = useState({
     color: "",
@@ -66,46 +70,39 @@ const CollectionDetail = () => {
   return (
     <div className="w-full">
       {/* ⭐ SECTION 1 — PRODUCT INTRO */}
-      <section className="w-full px-6 sm:px-12 md:px-10 pt-40 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      <section className="w-full px-6 sm:px-12 md:px-20 pt-40 pb-20">
+  <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
 
-          {/* LEFT SIDE */}
-          <div>
-            <div className="flex items-center gap-4 mt-2 mb-4">
-              <p className="text-3xl font-semibold">{selectedProduct.code}</p>
-              <div className="h-px w-12 bg-(--brand-accent)"></div>
-              <p className="text-xs sm:text-sm tracking-wide uppercase">
-                LASTRE IN GRES PORCELLANATO DI{" "}
-                <span className="font-semibold">GRANDE MASSIMO</span>
-              </p>
-            </div>
+    {/* LEFT TEXT = 5 columns */}
+    <div className="md:col-span-5">
+      <div className="flex items-center gap-4 mt-2 mb-4">
+        <p className="text-3xl font-semibold">{selectedProduct.code}</p>
+        <div className="h-px w-12 bg-(--brand-accent)"></div>
+        <p className="text-xs sm:text-sm tracking-wide uppercase">
+          LASTRE IN GRES PORCELLANATO DI{" "}
+          <span className="font-semibold">GRANDE MASSIMO</span>
+        </p>
+      </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-              {selectedProduct.name.split(" ")[0]}
-              <span className="font-light ml-2">
-                {selectedProduct.name.split(" ")[1]}
-              </span>
-            </h1>
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+        {selectedProduct.name}
+      </h1>
 
-            <p className="mt-4 text-base sm:text-lg leading-relaxed max-w-lg text-justify">
-              {selectedProduct.description}
-            </p>
-          </div>
+      <p className="mt-4 text-base sm:text-lg leading-relaxed max-w-lg text-justify">
+        {selectedProduct.description}
+      </p>
+    </div>
 
-          {/* RIGHT SIDE IMAGE (SQUARE) */}
-          <div className="w-full flex justify-center md:justify-end">
-            <img
-              src={selectedProduct.hero}
-              alt={selectedProduct.name}
-              className="
-                aspect-square
-                w-72 sm:w-84 md:w-96 lg:w-108 xl:w-120
-                object-cover rounded shadow-lg 
-              "
-            />
-          </div>
-        </div>
-      </section>
+    {/* RIGHT IMAGE = 7 columns */}
+    <div className="md:col-span-7 flex justify-center">
+      <img
+        src={selectedProduct.hero}
+        alt={selectedProduct.name}
+        className="w-full h-64 sm:h-80 md:h-[360px] lg:h-[416px] object-cover rounded-lg shadow-xl"
+      />
+    </div>
+  </div>
+</section>
 
       {/* Divider */}
       <section>
@@ -118,10 +115,10 @@ const CollectionDetail = () => {
           Overview of Natural Stone Properties
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
 
           {/* LEFT SIDE TABLE */}
-          <div className="space-y-4">
+          <div className="space-y-4 md:col-span-5">
             {Object.entries(stoneProperties).map(([key, value], idx) => (
               <div key={idx} className="grid grid-cols-2 border-b border-gray-700 pb-2">
                 <span className="text-gray-300 capitalize">
@@ -133,38 +130,8 @@ const CollectionDetail = () => {
           </div>
 
           {/* ⭐ RIGHT SIDE — IMAGE SLIDER WITH TAILWIND ARROW COLORS */}
-          <div
-            className="
-              flex justify-center w-full relative
-
-              [&_.swiper-button-next]:text-var(--brand-bg)
-              [&_.swiper-button-prev]:text-var(--brand-bg)
-
-              [&_.swiper-button-next]:!text-4xl
-              [&_.swiper-button-prev]:!text-4xl
-
-              [&_.swiper-button-next]:right-0
-              [&_.swiper-button-prev]:left-0
-            "
-          >
-            <Swiper
-              modules={[Navigation]}
-              navigation
-              loop={true}
-              spaceBetween={20}
-              slidesPerView={1}
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md"
-            >
-              {images.map((src, idx) => (
-                <SwiperSlide key={idx}>
-                  <img
-                    src={src}
-                    alt={`Slide ${idx}`}
-                    className="aspect-square w-full object-cover rounded shadow-lg"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+          <div className="md:col-span-7">
+            <ImageSlider/>
           </div>
         </div>
       </section>

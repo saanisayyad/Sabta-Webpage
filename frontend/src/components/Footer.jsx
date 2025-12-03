@@ -1,107 +1,151 @@
 import React from "react";
-import { FaAddressBook, FaFacebookSquare, FaInstagram, FaLinkedin, FaPinterest, FaTelegram, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaInstagram,
+  FaLinkedin,
+  FaPinterest,
+  FaTwitter,
+} from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdAddIcCall } from "react-icons/md";
+import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
   return (
     <div>
-      {/* ✅ FOOTER */}
+      {/* FOOTER */}
       <footer className="w-full px-6 md:px-12 lg:px-20 pt-20 pb-6">
+        <div
+          className="
+          grid 
+          grid-cols-1 
+          sm:grid-cols-2 
+          md:grid-cols-3 
+          lg:grid-cols-8 
+          gap-10 
+          lg:gap-0 
+          items-start
+        "
+        >
+          {/* COMPANY NAME */}
+          <div className="col-span-1 md:col-span-1 lg:col-span-3">
+            <h2 className="text-xl font-bold mb-4">Sabta Granite</h2>
+            <p
+              className="leading-relaxed max-w-sm"
+              style={{ textAlign: "justify" }}
+            >
+              Drawing inspiration from timeless design to offer large-format
+              slabs that transform interiors and exteriors alike. From flooring
+              to wall cladding, our surfaces redefine the look and feel of
+              living and commercial spaces.
+            </p>
+          </div>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-15 items-start">
+          {/* 🔥 MOBILE DIVIDER */}
+          <div className="w-full h-px my-6 bg-linear-to-r from-transparent via-(--brand-accent) to-transparent sm:hidden"></div>
 
-    {/* ✅ COMPANY NAME */}
-    <div>
-      <h2 className="text-xl font-bold mb-4">
-        Sabta Granite
-      </h2>
-      <p className=" leading-relaxed max-w-sm text-sm" style={{ textAlign: "justify" }}>
-        Drawing inspiration from timeless design to offer large-format slabs that
-        transform interiors and exteriors alike. From flooring to wall cladding, our
-        surfaces redefine the look and feel of living and commercial spaces.
-      </p>
-    </div>
+          {/* CONTACT */}
+          <div className="col-span-1 md:col-span-1 lg:col-span-3">
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/kskRgHSwUrQmXKtX9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline inline-flex items-center gap-2"
+                >
+                  <FaLocationDot size={20} />
+                  <span>
+                    P.O. Box : 34390 Industrial Area # 11 Sharjah - UAE
+                  </span>
+                </a>
+              </li>
 
-    {/* ✅ CONTACT */}
-    <div>
-      <h3 className="text-lg font-semibold mb-4">
-        Contact
-      </h3>
-      <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="tel:+971502050707"
+                  className="hover:underline inline-flex items-center gap-2"
+                >
+                  <MdAddIcCall size={20} />
+                  <span>+971 50 205 0707</span>
+                </a>
+              </li>
 
-        <li>
-  <a
-    href="https://www.google.com/maps"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:underline inline-flex items-center gap-2"
-  >
-    <FaAddressBook />
-    <span>P.O.Box:34390 Industrial Area #11 Sharjah - UAE</span>
-  </a>
-</li>
+              <li>
+                <a
+                  href="tel:+97165354704"
+                  className="hover:underline inline-flex items-center gap-2"
+                >
+                  <MdAddIcCall size={20} />
+                  <span>+971 6 535 4704</span>
+                </a>
+              </li>
 
+              <li>
+                <a
+                  href="mailto:sale@sabtagranite.com"
+                  className="hover:underline inline-flex items-center gap-2"
+                >
+                  <IoMdMail size={20} />
+                  <span>sale@sabtagranite.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-        <li>
-          <a href="tel:+9710000000" className="hover:underline inline-flex items-center gap-2">
-            <FaTelegram />
-            <span>+971-000-0000</span>
-          </a>
-        </li>
+          {/* 🔥 MOBILE DIVIDER */}
+          <div className="w-full h-px my-6 bg-linear-to-r from-transparent via-(--brand-accent) to-transparent sm:hidden"></div>
 
-        <li>
-          <a href="tel:+971500000000" className="hover:underline inline-flex items-center gap-2">
-            <FaTelegram />
-            <span>+971-500-000-000</span>
-          </a>
-        </li>
+          {/* SOCIAL */}
+          <div className="col-span-1 md:col-span-1 lg:col-span-2">
+            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
 
-        <li>
-          <a
-            href="mailto:info@sabtamarble.com"
-            className="hover:underline inline-flex items-center gap-2"
-          >
-            <FaTelegram />
-            <span>sale@sabtagranite.com</span>
-          </a>
-        </li>
+            <div className="flex items-center gap-5 text-2xl">
+              <a
+                href="https://www.facebook.com/SGMT2003"
+                target="_blank"
+                className="hover:opacity-70"
+              >
+                <FaFacebookSquare />
+              </a>
+              <a
+                href="https://www.instagram.com/sabta_granite/"
+                target="_blank"
+                className="hover:opacity-70"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://x.com/sgmt2003"
+                target="_blank"
+                className="hover:opacity-70"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="https://www.pinterest.com/sabta_granite/"
+                target="_blank"
+                className="hover:opacity-70"
+              >
+                <FaPinterest />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sabta-granite-and-marbles-trading-10b325251/"
+                target="_blank"
+                className="hover:opacity-70"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
+        </div>
 
-      </ul>
-    </div>
-
-    {/* ✅ SOCIAL */}
-    <div>
-      <h3 className="text-lg font-semibold mb-4">
-        Follow Us
-      </h3>
-
-      <div className="flex items-center gap-5 text-2xl">
-        <a href="#" className="hover:opacity-70">
-          <FaFacebookSquare />
-        </a>
-        <a href="#" className="hover:opacity-70">
-          <FaInstagram />
-        </a>
-        <a href="#" className="hover:opacity-70">
-          <FaTwitter />
-        </a>
-        <a href="#" className="hover:opacity-70">
-          <FaPinterest />
-        </a>
-        <a href="#" className="hover:opacity-70">
-          <FaLinkedin />
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  {/* ✅ COPYRIGHT */}
-  <div className="text-center  mt-14 pt-6 border-t">
-    © {new Date().getFullYear()} Sabta Granite. All rights reserved.
-  </div>
-
-</footer>
-
+        {/* COPYRIGHT */}
+        <div className="text-center mt-14 pt-6 border-t">
+          © {new Date().getFullYear()} Sabta Granite. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 };

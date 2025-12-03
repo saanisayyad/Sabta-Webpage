@@ -1,5 +1,6 @@
 import React from 'react'
-
+import AboutBanner from "../assets/BannerImages/AboutBanner.jpeg"
+import AboutImage from "../assets/BannerImages/AboutImage.jpeg"
 const About = () => {
   return (
     <div>
@@ -8,14 +9,14 @@ const About = () => {
   className="w-full h-64 sm:h-80 md:h-[400px] bg-fixed bg-center bg-cover relative flex items-center justify-center"
   style={{
     backgroundImage:
-      "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+      `url(${AboutBanner})`,
   }}
 >
   {/* ✅ Dark Overlay */}
   <div className="absolute inset-0 bg-black/50"></div>
 
   {/* ✅ CENTERED HEADING */}
-  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white relative z-10">
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white relative z-10 uppercase">
     About Us
   </h1>
 </section>
@@ -54,7 +55,7 @@ const About = () => {
     {/* ✅ IMAGE BLOCK */}
     <div className="w-full h-64 sm:h-80 lg:h-full">
       <img
-        src="https://plus.unsplash.com/premium_photo-1668383778557-d71c562fdb4b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src={AboutImage}
         alt="Who We Are"
         className="w-full h-full object-cover rounded"
       />
