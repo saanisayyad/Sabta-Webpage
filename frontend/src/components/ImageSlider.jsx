@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { RxDoubleArrowRight, RxDoubleArrowLeft } from "react-icons/rx";
-import { IoClose } from "react-icons/io5";
+import { IoCloseOutline } from "react-icons/io5";
 import Slab1 from "../assets/ProductImages/Slab1.jpeg";
 import Slab2 from "../assets/ProductImages/Slab2.jpeg";
 import Slab3 from "../assets/ProductImages/Slab3.jpeg";
@@ -73,6 +73,8 @@ const ImageSlider = () => {
       </div>
 
       {/* ---------- POPUP SLIDER ---------- */}
+      {/* ---------- POPUP SLIDER ---------- */}
+      {/* ---------- POPUP SLIDER ---------- */}
 {popupOpen && (
   <div
     className="fixed inset-0 bg-black/80 flex justify-center items-center z-50"
@@ -85,30 +87,31 @@ const ImageSlider = () => {
       {/* CLOSE BUTTON (INSIDE IMAGE TOP-RIGHT) */}
       <button
         onClick={() => setPopupOpen(false)}
-        className="absolute top-1 right-41 z-30 
-                  font-bold 
-                   bg-(--brand-bg)
-                   rounded-full w-6 h-6 flex items-center justify-center"
+        className="absolute top-3 right-3 z-30 
+                   text-white text-3xl font-bold 
+                   bg-(--brand-bg) 
+                   rounded-full w-8 h-8 flex items-center justify-center"
       >
-        <IoClose  />
+        <IoCloseOutline />
+
       </button>
 
       {/* LEFT ARROW (INSIDE IMAGE) */}
       <button
-        className="prev-popup absolute left-41 top-1/2 -translate-y-1/2 z-30 
-                   bg-(--brand-bg)
-                   rounded-full p-2"
+        className="prev-popup absolute left-3 top-1/2 -translate-y-1/2 z-30 
+                   bg-(--brand-bg) 
+                   text-white rounded-full p-2"
       >
-        <RxDoubleArrowLeft size={15} />
+        <RxDoubleArrowLeft size={20} />
       </button>
 
       {/* RIGHT ARROW (INSIDE IMAGE) */}
       <button
-        className="next-popup absolute right-41 top-1/2 -translate-y-1/2 z-30 
-                   bg-(--brand-bg)
-                  rounded-full p-2"
+        className="next-popup absolute right-3 top-1/2 -translate-y-1/2 z-30 
+                   bg-(--brand-bg) 
+                   text-white rounded-full p-2"
       >
-        <RxDoubleArrowRight size={15} />
+        <RxDoubleArrowRight size={20} />
       </button>
 
       <Swiper
