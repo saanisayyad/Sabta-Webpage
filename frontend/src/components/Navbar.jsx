@@ -28,12 +28,19 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex gap-8 font-medium">
+          <ul className="hidden md:flex gap-8 font-medium items-center">
             <li><Link to="/">HOME</Link></li>
             <li><Link to="/about">ABOUT US</Link></li>
             <li><Link to="/collections">COLLECTIONS</Link></li>
             <li><Link to="/blog">BLOG</Link></li>
             <li><Link to="/contact">CONTACT US</Link></li>
+            <li>
+              <Link to="/new-arrival">
+                <button className="p-2 bg-(--brand-bg) font-semibold rounded hover:scale-105 transition">
+                  NEW ARRIVALS
+                </button>
+              </Link>
+            </li>
           </ul>
 
           {/* Mobile Hamburger */}
@@ -92,6 +99,11 @@ const Navbar = () => {
           </Link>
           <Link to="/contact" onClick={() => setMenuOpen(false)} className="block">
             CONTACT US
+          </Link>
+          <Link to="/new-arrival" onClick={() => setMenuOpen(false)} className="block">
+            <button>
+              NEW ARRIVALS
+            </button>
           </Link>
         </nav>
       </div>

@@ -14,7 +14,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
-import Marble from "../assets/BannerImages/Marble.jpeg";
+import Marble from "../assets/BannerImages/Marble1.jpeg";
 import Granite from "../assets/BannerImages/Granite.jpeg";
 import Quartz from "../assets/BannerImages/Quartz.jpeg";
 

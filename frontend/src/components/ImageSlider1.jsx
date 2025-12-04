@@ -11,7 +11,7 @@ import Slab3 from "../assets/ProductImages/Slab3.jpeg";
 import Slab4 from "../assets/ProductImages/Slab4.jpeg";
 import Slab5 from "../assets/ProductImages/Slab5.jpeg";
 
-const ImageSlider = () => {
+const ImageSlider1 = () => {
   const images = [Slab1, Slab2, Slab3, Slab4, Slab5];
 
   const [popupOpen, setPopupOpen] = useState(false);
@@ -64,8 +64,7 @@ const ImageSlider = () => {
                   setActiveIndex(i);
                   setPopupOpen(true);
                 }}
-                className="w-full h-auto
-                           object-cover rounded-lg shadow-xl cursor-pointer"
+                className="w-full h-64 sm:h-80 md:h-[360px] lg:h-[416px] object-cover rounded-lg shadow-xl cursor-pointer"
               />
             </SwiperSlide>
           ))}
@@ -147,4 +146,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default ImageSlider1;

@@ -11,6 +11,8 @@ import Collections from "./pages/Collections";
 import CollectionDetail from "./pages/CollectionDetails";
 import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
+import WhatsAppButton from "./components/WhatsAppButton";
+import BackButton from "./components/BackButton";
 
 function App() {
 
@@ -33,10 +35,14 @@ function App() {
         <Route path="/collections/:collectionName/:productId" element={<ProductDetail />} />
         <Route path="/blog" element={<div>Blog Page</div>} />
         <Route path="/contact" element={<div>Contact Page</div>} />
+        <Route path="/new-arrival" element={<div>New Arrivals Page</div>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <WhatsAppButton />
+      <BackButton />
     </BrowserRouter>
+    
   );
 }
 

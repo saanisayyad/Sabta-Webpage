@@ -3,7 +3,7 @@ import NotFound from "./NotFound";
 import { useEffect, useState } from "react";
 import { api } from "../api/api";
 import Filters from "../components/Filters";
-import Marble from "../assets/BannerImages/Marble.jpeg";
+import Marble from "../assets/BannerImages/Marble2.jpeg";
 import Granite from "../assets/BannerImages/Granite.jpeg";
 import Onyx from "../assets/BannerImages/Onyx.jpeg";
 import Travertine from "../assets/BannerImages/Travertine.jpeg";
@@ -463,7 +463,9 @@ const CollectionDetail = () => {
           </p>
         </div>
       </section>
-
+      <section className="px-6 sm:px-10 md:px-16 lg:px-20 pb-5">
+        <Filters filters={filters} setFilters={setFilters} />
+      </section>
       {/* PRODUCT GRID WITH HOVER EFFECT */}
       <section className="px-6 sm:px-10 md:px-16 lg:px-20 pb-20">
         <h2 className="text-xl sm:text-2xl font-semibold mb-6"></h2>
