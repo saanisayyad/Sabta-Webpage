@@ -64,15 +64,13 @@ const ImageSlider1 = () => {
                   setActiveIndex(i);
                   setPopupOpen(true);
                 }}
-                className="w-full h-64 sm:h-80 md:h-[360px] lg:h-[416px] object-cover rounded-lg shadow-xl cursor-pointer"
+                className="flex justify-center aspect-4/3 w-full"
               />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
 
-      {/* ---------- POPUP SLIDER ---------- */}
-      {/* ---------- POPUP SLIDER ---------- */}
       {/* ---------- POPUP SLIDER ---------- */}
 {popupOpen && (
   <div
@@ -87,7 +85,7 @@ const ImageSlider1 = () => {
       <button
         onClick={() => setPopupOpen(false)}
         className="absolute top-3 right-3 z-30 
-                   text-white text-3xl font-bold 
+                   text-3xl font-bold 
                    bg-(--brand-bg) 
                    rounded-full w-8 h-8 flex items-center justify-center"
       >
@@ -99,7 +97,7 @@ const ImageSlider1 = () => {
       <button
         className="prev-popup absolute left-3 top-1/2 -translate-y-1/2 z-30 
                    bg-(--brand-bg) 
-                   text-white rounded-full p-2"
+                   rounded-full p-2"
       >
         <RxDoubleArrowLeft size={20} />
       </button>
@@ -108,7 +106,7 @@ const ImageSlider1 = () => {
       <button
         className="next-popup absolute right-3 top-1/2 -translate-y-1/2 z-30 
                    bg-(--brand-bg) 
-                   text-white rounded-full p-2"
+                   rounded-full p-2"
       >
         <RxDoubleArrowRight size={20} />
       </button>

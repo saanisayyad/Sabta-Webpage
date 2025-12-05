@@ -96,20 +96,20 @@ const CollectionDetail = () => {
       finishes: "Polished and Honed (most popular for bookmatch installations)",
       background: "MARBLE BOOKMATCH",
     },
-    "exotic-granite": {
+    "exotic-color": {
       hero: ExoticGranite,
       heading: "Bold Patterns for Designs That Stand Out",
       subheading:
-        "Our Exotic Granite range is chosen for its dramatic colors, rare mineral formations and striking movement. These slabs bring a distinctive character to any setting, offering a balance of strength and visual depth. Each piece is naturally formed over millions of years, giving your project a surface that feels unique and unforgettable.",
+        "Our Exotic Color range is chosen for its dramatic colors, rare mineral formations and striking movement. These slabs bring a distinctive character to any setting, offering a balance of strength and visual depth. Each piece is naturally formed over millions of years, giving your project a surface that feels unique and unforgettable.",
       heading1: "A Rare Expression of Nature’s Craft",
       description1:
-        "Exotic Granite forms deep within the earth, shaped by intense heat and mineral-rich magma. This slow creation process produces bold veining, vibrant tones and unusual textures found only in select regions around the world. After quarrying, each block is cut and finished to highlight the natural artistry inside, resulting in a surface that is both durable and visually captivating.",
+        "Exotic Color forms deep within the earth, shaped by intense heat and mineral-rich magma. This slow creation process produces bold veining, vibrant tones and unusual textures found only in select regions around the world. After quarrying, each block is cut and finished to highlight the natural artistry inside, resulting in a surface that is both durable and visually captivating.",
       applications:
         "High-end kitchens, countertops, islands, feature walls, bar counters, luxury bathrooms, staircases, outdoor applications and statement décor elements",
       care: "Clean with mild soap or a gentle cleaner. Avoid strong chemicals. Seal periodically to maintain performance and color richness.",
       finishes:
         "Polished, Leathered, Honed and Flamed (depending on stone type)",
-      background: "EXOTIC GRANITE",
+      background: "EXOTIC COLOR",
     },
     onyx: {
       hero: Onyx,

@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="w-full h-px my-6 bg-linear-to-r from-transparent via-(--brand-accent) to-transparent sm:hidden"></div>
 
           {/* ---------- CONTACT ---------- */}
-          <div className="md:pl-20">
+          <div className=" md:pl-20">
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-3">
               <li>
@@ -88,7 +88,7 @@ const Footer = () => {
           <div className="w-full h-px my-6 bg-linear-to-r from-transparent via-(--brand-accent) to-transparent sm:hidden"></div>
 
           {/* ---------- SOCIAL LINKS ---------- */}
-          <div className="lg:w-1/3">
+          <div className="lg:w-1/3 md:pl-10">
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
 
             <div className="flex items-center gap-5 text-2xl">

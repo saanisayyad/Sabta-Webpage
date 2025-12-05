@@ -79,7 +79,7 @@ const ProductDetail = () => {
               <p className="text-3xl font-semibold">{selectedProduct.code}</p>
               <div className="h-px w-12 bg-(--brand-accent)"></div>
               <p className="text-xs sm:text-sm tracking-wide uppercase">
-                LASTRE IN GRES PORCELLANATO DI{" "}
+                Natural Stone Collections by SABTA GRANITE{" "}
                 <span className="font-semibold">GRANDE MASSIMO</span>
               </p>
             </div>
@@ -94,11 +94,11 @@ const ProductDetail = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="md:col-span-7 flex justify-center">
+          <div className="md:col-span-7 flex justify-center aspect-4/3 w-full">
             <img
               src={selectedProduct.hero}
               alt={selectedProduct.name}
-              className="w-full h-64 sm:h-80 md:h-[360px] lg:h-[416px] object-cover rounded-lg shadow-xl"
+              className="w-full h-full object-cover rounded-lg shadow-xl"
             />
           </div>
         </div>

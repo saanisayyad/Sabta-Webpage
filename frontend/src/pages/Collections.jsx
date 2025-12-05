@@ -28,7 +28,7 @@ const Collections = () => {
                   img: Onyx,
                 },
                 {
-                  name: "Exotic Granite",
+                  name: "Exotic Color",
                   img: ExoticGranite,
                 },
                 {
