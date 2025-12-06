@@ -1,30 +1,28 @@
-import { FaWhatsapp } from "react-icons/fa";
-
 const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/971555826436"  // ← your WhatsApp number here
+      href="https://wa.me/971555826436"
       target="_blank"
       rel="noopener noreferrer"
       className="
         fixed 
-        bottom-6 
-        right-6 
-        bg-green-500 
-        hover:bg-green-600 
-        text-black 
-        p-4 
-        rounded-full 
-        shadow-lg 
+        bottom-4 
+        right-4
+        p-0
         z-50 
         transition 
         duration-300 
+        hover:scale-110
         flex 
         items-center 
         justify-center
       "
     >
-      <FaWhatsapp size={28} />
+      <img
+        src="/WhatsApp_logo.png"
+        alt="WhatsApp"
+        className="w-18 h-18 object-contain"
+      />
     </a>
   );
 };

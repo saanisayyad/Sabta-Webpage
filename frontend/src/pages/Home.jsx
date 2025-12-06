@@ -318,6 +318,16 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="w-full px-6 md:px-12 lg:px-20 py-16">
+      <div className="w-full aspect-video rounded-xl overflow-hidden border border-(--brand-accent)/40 shadow-lg">
+        <iframe 
+          src="https://www.youtube.com/embed/ghdsJCT1Hqs?si=59DiyQ0NZtr-qg__" 
+          controls 
+          className="w-full h-full object-cover"
+        /><iframe/>
+      </div>
+
+    </section>
       {/* ✅ GIF SECTION */}
       <section data-aos="fade-up" className="w-[90%] mx-auto py-16 flex justify-center">
         <img src={gif} alt="Sabta GIF" className="max-w-full h-auto" />

@@ -1,8 +1,12 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
 
 const BackButton = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // If you're on home page "/", don't show the button
+  if (location.pathname === "/") return null;
 
   return (
     <button
