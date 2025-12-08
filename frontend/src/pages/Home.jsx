@@ -319,20 +319,24 @@ const Home = () => {
         </div>
       </section>
       <section data-aos="fade-up" className="w-full px-6 md:px-12 lg:px-20 py-16">
-      <div className="w-full aspect-video rounded-xl overflow-hidden border border-(--brand-accent)/40 shadow-lg">
-        <iframe 
-          src="https://www.youtube.com/embed/ghdsJCT1Hqs?si=59DiyQ0NZtr-qg__" 
-          controls 
-          className="w-full h-full object-cover"
-        /><iframe/>
-      </div>
+  <div className="w-full aspect-video rounded-xl overflow-hidden border border-(--brand-accent)/40 shadow-lg">
+    <iframe 
+      src="https://www.youtube.com/embed/ghdsJCT1Hqs?si=59DiyQ0NZtr-qg__" 
+      className="w-full h-full object-cover"
+    />
+  </div>
+</section>
 
-    </section>
       {/* ✅ GIF SECTION */}
       <section data-aos="fade-up" className="w-full px-6 md:px-12 lg:px-20 py-16">
-        <img src={gif} alt="Sabta GIF" className="w-full aspect-video rounded-xl overflow-hidden border border-(--brand-accent)/40 shadow-lg" />
-      </section>
-    <section>
+  <img 
+    src={gif} 
+    alt="Sabta GIF" 
+    className="w-full aspect-video rounded-xl overflow-hidden border border-(--brand-accent)/40 shadow-lg"
+  />
+</section>
+
+    <section className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-16">
         <ExperienceSection/>
     </section>
     </div>
