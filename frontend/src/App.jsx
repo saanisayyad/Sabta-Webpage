@@ -13,6 +13,7 @@ import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 import WhatsAppButton from "./components/WhatsAppButton";
 import BackButton from "./components/BackButton";
+import ScrollDownButton from "./components/ScrollDownButton";
 import Contact from "./pages/Contact";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
       <Footer />
       <WhatsAppButton />
       <BackButton />
+      <ScrollDownButton />
     </BrowserRouter>
   );
 }
