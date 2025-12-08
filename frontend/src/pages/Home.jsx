@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
-import gif from "/Sabta_Gif.webp";
+import gif from "/Sabta_Gif.gif";
 import ExperienceSection from "../components/ExperienceSection";
 import Marble from "../assets/CollectionImagesHome/Marble.png"
 import Bookmatch from "../assets/CollectionImagesHome/Bookmatch.jpeg"

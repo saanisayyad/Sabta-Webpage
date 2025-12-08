@@ -15,7 +15,6 @@ import ProductPageImage from "../assets/ProductImages/ProductPageImage.jpeg";
 const ProductTags = ({ product }) => {
   return (
     <div className="flex flex-wrap gap-3 mt-6">
-
       {/* TYPE */}
       {product.type && (
         <span className="px-4 py-1.5 rounded-full border border-(--brand-accent) text-sm flex items-center gap-2">
@@ -125,7 +124,6 @@ const ProductDetail = () => {
 
   return (
     <div className="w-full">
-
       {/* ⭐ TAGS AT VERY TOP */}
       <section className="w-full px-6 sm:px-12 md:px-20 pt-30">
         <ProductTags product={selectedProduct} />
@@ -134,7 +132,6 @@ const ProductDetail = () => {
       {/* ⭐ SECTION 1 — PRODUCT INTRO */}
       <section className="w-full px-6 sm:px-12 md:px-20 pt-10 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
-
           {/* LEFT TEXT */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-4 mt-2 mb-4">
@@ -154,6 +151,34 @@ const ProductDetail = () => {
             <p className="mt-4 text-base sm:text-lg leading-relaxed max-w-lg text-justify">
               {selectedProduct.description}
             </p>
+
+            <div className="space-y-4 mt-5 text-sm leading-snug">
+              {/* Inventory Maintained In */}
+              <div>
+                <h4 className="font-semibold">Inventory Maintained</h4>
+                <ul className="list-disc ml-5 space-y-1">
+                  <li>2CM and 3CM Polished Slabs</li>
+                  <li>Ready Polished 2CM Tiles in 60 X 30 and 60 X 60</li>
+                </ul>
+              </div>
+
+              {/* Available on Request */}
+              <div>
+                <h4 className="font-semibold">Available on Request</h4>
+                <ul className="list-disc ml-5 space-y-1">
+                  <li>Custom Sizes</li>
+                  <li>Custom Surface Finishes</li>
+                </ul>
+              </div>
+
+              {/* Product Advantage */}
+              <div>
+                <h4 className="font-semibold">Product Advantage</h4>
+                <ul className="list-disc ml-5 space-y-1">
+                  <li>Strong Production Control for Large Projects</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* RIGHT IMAGE */}
@@ -179,7 +204,6 @@ const ProductDetail = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-
           {/* LEFT SIDE PROPERTIES */}
           <div className="space-y-4 md:col-span-5">
             {Object.entries(stoneProperties).map(([key, value], idx) => (
@@ -212,7 +236,6 @@ const ProductDetail = () => {
       {/* ⭐ SECTION 3 — SECOND IMAGE SLIDER */}
       <section className="w-full px-6 sm:px-12 md:px-20 py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-
           <div className="md:col-span-7">
             <ImageSlider2 />
           </div>
@@ -222,7 +245,6 @@ const ProductDetail = () => {
               Exceptional Quality You Can Trust
             </h2>
           </div>
-
         </div>
       </section>
     </div>

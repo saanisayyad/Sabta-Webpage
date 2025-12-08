@@ -1,6 +1,10 @@
 import React from 'react'
 import AboutBanner from "../assets/BannerImages/AboutBanner.jpeg"
 import AboutImage from "../assets/BannerImages/AboutImage.jpeg"
+import Certificate1 from "/FIRESTONE-9001.pdf"
+import Certificate2 from "/FIRESTONE-14001.pdf"
+import Certificate3 from "/FIRESTONE-45001.pdf"
+
 const About = () => {
   return (
     <div>
@@ -138,6 +142,53 @@ const About = () => {
         UAE’s stone industry.
       </p>
     </div>
+
+  </div>
+
+</section>
+{/* ✅ ISO CERTIFICATIONS SECTION */}
+<section data-aos="fade-up" className="w-[90%] mx-auto py-16">
+
+  <div className="text-center mb-12">
+    <h2 className="text-2xl sm:text-3xl font-bold">
+      ISO Certifications
+    </h2>
+    <p className="mt-2 text-gray-600">
+      Our commitment to global quality standards is backed by internationally recognized certifications.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    {/* ISO 9001 */}
+    <a
+      href= {Certificate1}
+      target="_blank"
+      className="border rounded-xl p-6 shadow-sm hover:shadow-lg transition text-center"
+    >
+      <h3 className="font-semibold mb-3">ISO 9001</h3>
+      <p className="text-sm text-gray-600">Quality Management Systems</p>
+    </a>
+
+    {/* ISO 14001 */}
+    <a
+      href={Certificate2}
+      target="_blank"
+      className="border rounded-xl p-6 shadow-sm hover:shadow-lg transition text-center"
+    >
+      <h3 className="font-semibold mb-3">ISO 14001</h3>
+      <p className="text-sm text-gray-600">Environmental Management</p>
+    </a>
+
+    {/* ISO 45001 */}
+    <a
+      href={Certificate3}
+      target="_blank"
+      className="border rounded-xl p-6 shadow-sm hover:shadow-lg transition text-center"
+    >
+      <h3 className="font-semibold mb-3">ISO 45001</h3>
+      <p className="text-sm text-gray-600">Occupational Health & Safety</p>
+    </a>
 
   </div>
 

@@ -25,7 +25,7 @@ const ExperienceSection = () => {
   return (
     <section
   className="w-[90%] mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-20 flex justify-center
-    bg-[length:cover] bg-center
+    bg-cover bg-center
     md:bg-fixed   /* Parallax only on md+ screens */
     bg-scroll     /* Default scroll on mobile */
   "
@@ -37,7 +37,7 @@ const ExperienceSection = () => {
       <div
         className="
           w-full max-w-4xl
-          border rounded-xl bg-[var(--brand-bg)] border-transparent
+          border rounded-xl bg-(--brand-bg) border-transparent
           shadow-sm hover:shadow-xl
           transition-all duration-300
           p-6 sm:p-10
