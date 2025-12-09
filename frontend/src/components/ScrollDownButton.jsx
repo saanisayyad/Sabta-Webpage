@@ -13,7 +13,7 @@ const ScrollDownButton = () => {
       onClick={handleScroll}
       className="
         fixed
-        top-1/2
+        top-2/3
         right-6
         -translate-y-1/2
         z-50

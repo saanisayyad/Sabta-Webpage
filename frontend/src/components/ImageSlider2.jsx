@@ -29,26 +29,27 @@ const ImageSlider2 = () => {
   return (
     <>
       <div className="relative">
-        <button className="prev-main absolute left-2 top-1/2 -translate-y-1/2 z-20 
+        <button className="prev-main-2 absolute left-2 top-1/2 -translate-y-1/2 z-20 
                            bg-(--brand-bg) rounded-full p-1">
           <RxDoubleArrowLeft size={30} />
         </button>
 
-        <button className="next-main absolute right-2 top-1/2 -translate-y-1/2 z-20 
+        <button className="next-main-2 absolute right-2 top-1/2 -translate-y-1/2 z-20 
                            bg-(--brand-bg) rounded-full p-1">
           <RxDoubleArrowRight size={30} />
         </button>
 
         <Swiper
+          key="Slider2Main"
           loop={true}
           modules={[Navigation]}
           onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = ".prev-main";
-            swiper.params.navigation.nextEl = ".next-main";
+            swiper.params.navigation.prevEl = ".prev-main-2";
+            swiper.params.navigation.nextEl = ".next-main-2";
           }}
           navigation={{
-            prevEl: ".prev-main",
-            nextEl: ".next-main",
+            prevEl: ".prev-main-2",
+            nextEl: ".next-main-2",
           }}
         >
           {images.map((img, i) => (
@@ -88,30 +89,31 @@ const ImageSlider2 = () => {
             </button>
 
             <button
-              className="prev-popup absolute left-3 top-1/2 -translate-y-1/2 z-30 
+              className="prev-popup-2 absolute left-3 top-1/2 -translate-y-1/2 z-30 
                          bg-(--brand-bg) rounded-full p-2"
             >
               <RxDoubleArrowLeft size={22} />
             </button>
 
             <button
-              className="next-popup absolute right-3 top-1/2 -translate-y-1/2 z-30 
+              className="next-popup-2 absolute right-3 top-1/2 -translate-y-1/2 z-30 
                          bg-(--brand-bg) rounded-full p-2"
             >
               <RxDoubleArrowRight size={22} />
             </button>
 
             <Swiper
+              key="Slider2Popup"
               loop={true}
               initialSlide={activeIndex}
               modules={[Navigation]}
               onBeforeInit={(swiper) => {
-                swiper.params.navigation.prevEl = ".prev-popup";
-                swiper.params.navigation.nextEl = ".next-popup";
+                swiper.params.navigation.prevEl = ".prev-popup-2";
+                swiper.params.navigation.nextEl = ".next-popup-2";
               }}
               navigation={{
-                prevEl: ".prev-popup",
-                nextEl: ".next-popup",
+                prevEl: ".prev-popup-2",
+                nextEl: ".next-popup-2",
               }}
             >
               {images.map((img, i) => (

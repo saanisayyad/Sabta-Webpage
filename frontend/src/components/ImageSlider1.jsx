@@ -31,29 +31,30 @@ const ImageSlider1 = () => {
       <div className="relative">
         {/* CUSTOM ARROWS MUST COME BEFORE SWIPER */}
         <button
-          className="prev-main absolute left-2 top-1/2 -translate-y-1/2 z-20 
+          className="prev-main-1 absolute left-2 top-1/2 -translate-y-1/2 z-20 
                    bg-(--brand-bg) rounded-full p-1 "
         >
           <RxDoubleArrowLeft size={30} />
         </button>
 
         <button
-          className="next-main absolute right-2 top-1/2 -translate-y-1/2 z-20 
+          className="next-main-1 absolute right-2 top-1/2 -translate-y-1/2 z-20 
                    bg-(--brand-bg) rounded-full p-1 "
         >
           <RxDoubleArrowRight size={30} />
         </button>
 
         <Swiper
+          key="Slider1Main"
           loop={true}
           modules={[Navigation]}
           onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = ".prev-main";
-            swiper.params.navigation.nextEl = ".next-main";
+            swiper.params.navigation.prevEl = ".prev-main-1";
+            swiper.params.navigation.nextEl = ".next-main-1";
           }}
           navigation={{
-            prevEl: ".prev-main",
-            nextEl: ".next-main",
+            prevEl: ".prev-main-1",
+            nextEl: ".next-main-1",
           }}
         >
           {images.map((img, i) => (
@@ -95,7 +96,7 @@ const ImageSlider1 = () => {
 
       {/* LEFT ARROW (INSIDE IMAGE) */}
       <button
-        className="prev-popup absolute left-3 top-1/2 -translate-y-1/2 z-30 
+        className="prev-popup-1 absolute left-3 top-1/2 -translate-y-1/2 z-30 
                    bg-(--brand-bg) 
                    rounded-full p-2"
       >
@@ -104,7 +105,7 @@ const ImageSlider1 = () => {
 
       {/* RIGHT ARROW (INSIDE IMAGE) */}
       <button
-        className="next-popup absolute right-3 top-1/2 -translate-y-1/2 z-30 
+        className="next-popup-1 absolute right-3 top-1/2 -translate-y-1/2 z-30 
                    bg-(--brand-bg) 
                    rounded-full p-2"
       >
@@ -112,16 +113,17 @@ const ImageSlider1 = () => {
       </button>
 
       <Swiper
+        key="Slider1Popup"
         loop={true}
         initialSlide={activeIndex}
         modules={[Navigation]}
         onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = ".prev-popup";
-          swiper.params.navigation.nextEl = ".next-popup";
+          swiper.params.navigation.prevEl = ".prev-popup-1";
+          swiper.params.navigation.nextEl = ".next-popup-1";
         }}
         navigation={{
-          prevEl: ".prev-popup",
-          nextEl: ".next-popup",
+          prevEl: ".prev-popup-1",
+          nextEl: ".next-popup-1",
         }}
       >
         {images.map((img, i) => (
