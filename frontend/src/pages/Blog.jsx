@@ -1,24 +1,27 @@
 import { Link } from "react-router-dom";
 import CollectionBanner from "../assets/BannerImages/Marble2.jpeg"; // <-- ADD THIS
+import Blog1 from "../assets/BlogImages/Blog1.png";
+import Blog2 from "../assets/BlogImages/Blog2.png";
+import Blog3 from "../assets/BlogImages/Blog3.png";
 
 const Blog = () => {
   const blogs = [
     {
       id: 1,
       title: "The Beauty of Premium Marble Surfaces",
-      image: "/blogs/marble.jpg",
+      image: Blog1,
       short: "Explore how premium marble elevates interior and exterior design.",
     },
     {
       id: 2,
       title: "Engineered Stone vs Natural Stone",
-      image: "/blogs/stone.jpg",
+      image: Blog2,
       short: "A complete guide comparing engineered and natural stones.",
     },
     {
       id: 3,
       title: "How to Choose the Right Granite",
-      image: "/blogs/granite.jpg",
+      image: Blog3,
       short: "Tips to select the best granite finish, color, and texture.",
     },
   ];

@@ -52,7 +52,7 @@ const CatalogPage = () => {
 
           <div className="flex gap-4">
             <button
-              onClick={() => handleView("/catalogues/new_engineered_marble.pdf")}
+              onClick={() => handleView("/catalogues/Engineered_Stone.pdf")}
               className="underline"
             >
               View Online
@@ -60,7 +60,7 @@ const CatalogPage = () => {
 
             <button
               onClick={() =>
-                handleDownloadClick("/catalogues/new_engineered_marble.pdf")
+                handleDownloadClick("/catalogues/Engineered_Stone.pdf")
               }
               className="border px-4 py-2 rounded-lg hover:opacity-80"
             >
@@ -81,7 +81,7 @@ const CatalogPage = () => {
 
           <div className="flex gap-4">
             <button
-              onClick={() => handleView("/catalogues/new_natural_stone.pdf")}
+              onClick={() => handleView("/catalogues/Engineered_Stone.pdf")}
               className="underline"
             >
               View Online
@@ -89,7 +89,7 @@ const CatalogPage = () => {
 
             <button
               onClick={() =>
-                handleDownloadClick("/catalogues/new_natural_stone.pdf")
+                handleDownloadClick("/catalogues/Engineered_Stone.pdf")
               }
               className="border px-4 py-2 rounded-lg hover:opacity-80"
             >

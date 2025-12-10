@@ -1,4 +1,7 @@
 import { useParams, Link } from "react-router-dom";
+import Blog1 from "../assets/BlogImages/Blog1.png";
+import Blog2 from "../assets/BlogImages/Blog2.png";
+import Blog3 from "../assets/BlogImages/Blog3.png";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -6,7 +9,7 @@ const BlogDetails = () => {
   const blogs = {
     1: {
       title: "The Beauty of Premium Marble Surfaces",
-      image: "/blog/marble.jpg",
+      image: Blog1,
       content: `
 Marble has been a timeless material used in architecture for centuries.
 
@@ -19,7 +22,7 @@ choice for luxury homes and commercial spaces.
 
     2: {
       title: "Engineered Stone vs Natural Stone",
-      image: "/blog/stone.jpg",
+      image: Blog2,
       content: `
 Engineered stone offers uniformity and strength, while natural stone 
 delivers unmatched beauty formed over millions of years.
@@ -30,7 +33,7 @@ delivers unmatched beauty formed over millions of years.
 
     3: {
       title: "How to Choose the Right Granite",
-      image: "/blog/granite.jpg",
+      image: Blog3,
       content: `
 Granite remains one of the most popular choices due to its toughness,
 ease of maintenance, and beautiful patterns.
