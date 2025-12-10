@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, A11y } from "swiper/modules";
-import Sabta_Video from "/Sabta_Video.mp4";
 import "swiper/css";
 import gif from "/Sabta_Gif.gif";
 import ExperienceSection from "../components/ExperienceSection";
@@ -350,7 +349,7 @@ const Home = () => {
       <div className="w-full aspect-video rounded-xl overflow-hidden border border-(--brand-accent)/40 shadow-lg">
         <video
           ref={videoRef}
-          src={Sabta_Video}
+          src="/sabta_video.mp4"
           className="w-full h-full object-cover"
           controls
           controlsList="nodownload noplaybackrate"
