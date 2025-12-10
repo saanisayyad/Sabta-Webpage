@@ -52,7 +52,7 @@ ease of maintenance, and beautiful patterns.
   }
 
   return (
-    <div className="w-full px-6 md:px-12 lg:px-20 py-20 mt-20">
+    <div data-aos="fade-up" className="w-full px-6 md:px-12 lg:px-20 py-20 mt-20">
 
       <Link to="/blog" className="underline text-sm">
         ← Back to Blogs

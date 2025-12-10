@@ -48,7 +48,7 @@ const CatalogPage = () => {
             className=" object-cover rounded-lg"
           />
 
-          <h3 className="text-xl font-semibold">Engineered Marble</h3>
+          <h3 className="text-xl font-semibold">Engineered Stone</h3>
 
           <div className="flex gap-4">
             <button

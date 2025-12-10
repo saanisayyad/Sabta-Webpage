@@ -24,7 +24,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div data-aos="fade-up" className="w-full">
       {/* BANNER */}
       <section
         data-aos="fade-up"

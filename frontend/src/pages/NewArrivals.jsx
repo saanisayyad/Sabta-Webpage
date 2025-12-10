@@ -49,7 +49,7 @@ const NewArrivals = () => {
   ];
 
   return (
-    <div className="w-full mt-30">
+    <div data-aos="fade-up" className="w-full mt-30">
       {/* BACKGROUND TITLE */}
       <section>
         <div className="w-full">
