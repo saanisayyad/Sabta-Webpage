@@ -37,7 +37,7 @@ const Home = () => {
         });
       },
       {
-        threshold: 0.6, // 60% of video must be visible to play
+        threshold: 0.2, // 20% of video must be visible to play
       }
     );
 

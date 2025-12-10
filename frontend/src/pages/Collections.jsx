@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ExperienceSection from "../components/ExperienceSection";
 import Marble from "../assets/CollectionImagesHome/Marble.png"
 import Bookmatch from "../assets/CollectionImagesHome/Bookmatch.jpeg"
 import Onyx from "../assets/CollectionImagesHome/Onyx.png"

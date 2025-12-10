@@ -16,6 +16,9 @@ import BackButton from "./components/BackButton";
 import ScrollDownButton from "./components/ScrollDownButton";
 import Contact from "./pages/Contact";
 import CatalogPage from "./pages/CatalogPage";
+import Blog from "./pages/Blog";
+import BlogDetails from "./pages/BlogDetails";
+import NewArrivals from "./pages/NewArrivals";
 
 function App() {
 
@@ -36,10 +39,11 @@ function App() {
         <Route path="/collections" element={<Collections />} />
         <Route path="/collections/:collectionName" element={<CollectionDetail />} />
         <Route path="/collections/:collectionName/:productId" element={<ProductDetail />} />
-        <Route path="/blog" element={<div>Blog Page</div>} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/new-arrival" element={<div>New Arrivals Page</div>} />
+        <Route path="/new-arrival" element={<NewArrivals />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
