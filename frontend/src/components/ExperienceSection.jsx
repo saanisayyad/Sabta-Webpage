@@ -32,6 +32,7 @@ const ExperienceSection = () => {
     bg-cover bg-center
     md:bg-fixed
     bg-scroll
+    rounded-xl
   "
   style={{ backgroundImage: `url(${ParallaxImage})` }}
 >

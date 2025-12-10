@@ -15,6 +15,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import BackButton from "./components/BackButton";
 import ScrollDownButton from "./components/ScrollDownButton";
 import Contact from "./pages/Contact";
+import CatalogPage from "./pages/CatalogPage";
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/collections/:collectionName" element={<CollectionDetail />} />
         <Route path="/collections/:collectionName/:productId" element={<ProductDetail />} />
         <Route path="/blog" element={<div>Blog Page</div>} />
+        <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/new-arrival" element={<div>New Arrivals Page</div>} />
         <Route path="*" element={<NotFound />} />

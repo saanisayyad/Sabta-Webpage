@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, A11y } from "swiper/modules";
+import Sabta_Video from "/Sabta_Video.mp4";
 import "swiper/css";
 import gif from "/Sabta_Gif.gif";
 import ExperienceSection from "../components/ExperienceSection";
@@ -21,6 +22,30 @@ import Terrazzo from "../assets/CollectionImagesHome/Terrazzo.jpeg"
 import MainImage from "../assets/BannerImages/Exotic-Granite.jpeg"
 
 const Home = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: 0.6, // 60% of video must be visible to play
+      }
+    );
+
+    if (video) observer.observe(video);
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <div>
         {/* ✅ HERO SECTION */}
@@ -318,14 +343,22 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section data-aos="fade-up" className="w-full px-6 md:px-12 lg:px-20 py-16">
-  <div className="w-full aspect-video rounded-xl overflow-hidden border border-(--brand-accent)/40 shadow-lg">
-    <iframe 
-      src="https://www.youtube.com/embed/ghdsJCT1Hqs?si=59DiyQ0NZtr-qg__" 
-      className="w-full h-full object-cover"
-    />
-  </div>
-</section>
+      <section
+      data-aos="fade-up"
+      className="w-full px-6 md:px-12 lg:px-20 py-16"
+    >
+      <div className="w-full aspect-video rounded-xl overflow-hidden border border-(--brand-accent)/40 shadow-lg">
+        <video
+          ref={videoRef}
+          src={Sabta_Video}
+          className="w-full h-full object-cover"
+          controls
+          controlsList="nodownload noplaybackrate"
+          disablePictureInPicture
+          onContextMenu={(e) => e.preventDefault()}
+        />
+      </div>
+    </section>
 
       {/* ✅ GIF SECTION */}
       <section data-aos="fade-up" className="w-full px-6 md:px-12 lg:px-20 py-16">

@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { RxDoubleArrowRight, RxDoubleArrowLeft } from "react-icons/rx";
 import { IoCloseOutline } from "react-icons/io5";
-
 import Slab1 from "../assets/BannerImages/Exotic-Granite.jpeg";
 import Slab2 from "../assets/BannerImages/Marble1.jpeg";
 import Slab3 from "../assets/BannerImages/Granite.jpeg";
