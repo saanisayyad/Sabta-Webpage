@@ -1,6 +1,6 @@
 *.psd filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
-public/catalogues/new_engineered_marble.pdf filter=lfs diff=lfs merge=lfs -text
-public/catalogues/new_natural_stone.pdf filter=lfs diff=lfs merge=lfs -text
-public/sabta_video.mp4 filter=lfs diff=lfs merge=lfs -text
+frontend/public/catalogues/new_engineered_marble.pdf filter=lfs diff=lfs merge=lfs -text
+frontend/public/catalogues/new_natural_stone.pdf filter=lfs diff=lfs merge=lfs -text
+frontend/public/sabta_video.mp4 filter=lfs diff=lfs merge=lfs -text
