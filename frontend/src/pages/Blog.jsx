@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import CollectionBanner from "../assets/BannerImages/Marble2.jpeg"; // <-- ADD THIS
+import BlogBanner from "../assets/BannerImages/Marble2.jpeg"; // <-- ADD THIS
 import Blog1 from "../assets/BlogImages/Blog1.png";
 import Blog2 from "../assets/BlogImages/Blog2.png";
 import Blog3 from "../assets/BlogImages/Blog3.png";
@@ -33,7 +33,7 @@ const Blog = () => {
         data-aos="fade-up"
         className="w-full h-64 sm:h-80 md:h-[400px] bg-fixed bg-center bg-cover relative flex items-center justify-center"
         style={{
-          backgroundImage: `url(${CollectionBanner})`,
+          backgroundImage: `url(${BlogBanner})`,
         }}
       >
         {/* Overlay */}

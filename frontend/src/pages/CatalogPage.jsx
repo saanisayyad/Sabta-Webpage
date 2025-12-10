@@ -1,7 +1,21 @@
-import { useState } from "react";
-import {IoCloseOutline } from "react-icons/io5";
+import { useEffect, useState } from "react";
+import { IoCloseOutline } from "react-icons/io5";
+import CatalogueBanner from "../assets/BannerImages/Quartz.jpeg";
 
 const CatalogPage = () => {
+  useEffect(() => {
+  const handleEsc = (e) => {
+    if (e.key === "Escape") {
+      setShowForm(false);
+      setShowPdfViewer(false);
+    }
+  };
+
+  window.addEventListener("keydown", handleEsc);
+
+  return () => window.removeEventListener("keydown", handleEsc);
+}, []);
+
   const [showForm, setShowForm] = useState(false);
   const [showPdfViewer, setShowPdfViewer] = useState(false);
 
@@ -14,13 +28,13 @@ const CatalogPage = () => {
     setShowPdfViewer(true);
   };
 
-  // DOWNLOAD CATALOG (first show form)
+  // DOWNLOAD WINDOW
   const handleDownloadClick = (file) => {
     setSelectedFile(file);
     setShowForm(true);
   };
 
-  // AFTER FORM SUBMIT → DOWNLOAD FILE
+  // AFTER FORM SUBMISSION → DOWNLOAD PDF
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -34,23 +48,35 @@ const CatalogPage = () => {
   };
 
   return (
-    <div className="w-full px-6 md:px-16 lg:px-32 py-20 mt-20">
-      <h2 className="text-3xl font-semibold mb-12">Our Catalogues</h2>
+    <div className="w-full">
 
-      {/* GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      {/* ========================= BANNER ========================= */}
+      <section
+        data-aos="fade-up"
+        className="w-full h-64 sm:h-80 md:h-[400px] bg-fixed bg-center bg-cover relative flex items-center justify-center"
+        style={{ backgroundImage: `url(${CatalogueBanner})` }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* CATALOG 1 */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold relative z-10 uppercase text-white">
+          Catalogues
+        </h1>
+      </section>
+
+      {/* ========================= GRID ========================= */}
+      <div data-aos="fade-up" className="px-6 md:px-16 lg:px-32 py-20 grid grid-cols-1 md:grid-cols-2 gap-12">
+
+        {/* ---------- CATALOG 1 ---------- */}
         <div className="rounded-xl border shadow-md p-5 space-y-4">
           <img
             src="/catalogues/New_Engineered_Marble.jpeg"
-            alt="Catalog 1"
-            className=" object-cover rounded-lg"
+            alt="Engineered Stone Catalogue"
+            className="w-full object-cover rounded-lg"
           />
 
           <h3 className="text-xl font-semibold">Engineered Stone</h3>
 
-          <div className="flex gap-4">
+          <div className="flex gap-6">
             <button
               onClick={() => handleView("/catalogues/Engineered_Stone.pdf")}
               className="underline"
@@ -59,9 +85,7 @@ const CatalogPage = () => {
             </button>
 
             <button
-              onClick={() =>
-                handleDownloadClick("/catalogues/Engineered_Stone.pdf")
-              }
+              onClick={() => handleDownloadClick("/catalogues/Engineered_Stone.pdf")}
               className="border px-4 py-2 rounded-lg hover:opacity-80"
             >
               Download
@@ -69,17 +93,17 @@ const CatalogPage = () => {
           </div>
         </div>
 
-        {/* CATALOG 2 */}
+        {/* ---------- CATALOG 2 ---------- */}
         <div className="rounded-xl border shadow-md p-5 space-y-4">
           <img
             src="/catalogues/New_Natural_Stone.jpeg"
-            alt="Catalog 2"
-            className=" object-cover rounded-lg"
+            alt="Natural Stone Catalogue"
+            className="w-full object-cover rounded-lg"
           />
 
           <h3 className="text-xl font-semibold">Natural Stone</h3>
 
-          <div className="flex gap-4">
+          <div className="flex gap-6">
             <button
               onClick={() => handleView("/catalogues/Engineered_Stone.pdf")}
               className="underline"
@@ -88,20 +112,17 @@ const CatalogPage = () => {
             </button>
 
             <button
-              onClick={() =>
-                handleDownloadClick("/catalogues/Engineered_Stone.pdf")
-              }
+              onClick={() => handleDownloadClick("/catalogues/Engineered_Stone.pdf")}
               className="border px-4 py-2 rounded-lg hover:opacity-80"
             >
               Download
             </button>
           </div>
         </div>
+
       </div>
 
-      {/* ------------------------------- */}
-      {/* PDF VIEWER POPUP */}
-      {/* ------------------------------- */}
+      {/* ========================= PDF VIEWER POPUP ========================= */}
       {showPdfViewer && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
           <div className="bg-white w-full max-w-4xl h-[80vh] rounded-xl shadow-xl relative">
@@ -111,7 +132,7 @@ const CatalogPage = () => {
               onClick={() => setShowPdfViewer(false)}
               className="absolute top-3 right-3 text-2xl"
             >
-              <IoCloseOutline />  
+              <IoCloseOutline />
             </button>
 
             <iframe
@@ -122,9 +143,7 @@ const CatalogPage = () => {
         </div>
       )}
 
-      {/* ------------------------------- */}
-      {/* DOWNLOAD FORM POPUP */}
-      {/* ------------------------------- */}
+      {/* ========================= DOWNLOAD FORM POPUP ========================= */}
       {showForm && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
           <div className="bg-(--brand-bg) border rounded-xl p-8 w-full max-w-lg shadow-xl relative">
@@ -148,20 +167,10 @@ const CatalogPage = () => {
                   name="name"
                   required
                   placeholder="Full Name"
-                  className="
-                    w-full px-4 py-3 border rounded-lg bg-transparent
-                    outline-none peer placeholder-transparent transition
-                  "
+                  className="w-full px-4 py-3 border rounded-lg bg-transparent outline-none peer placeholder-transparent transition"
                 />
-                <label
-                  className="
-                    absolute left-3 top-6 px-1 text-sm opacity-70 
-                    bg-(--brand-bg)
-                    pointer-events-none transition-all duration-200
-                    peer-focus:-top-3 peer-focus:text-xs peer-focus:opacity-100
-                    peer-valid:-top-3 peer-valid:text-xs
-                  "
-                >
+                <label className="absolute left-3 top-6 px-1 text-sm opacity-70 bg-(--brand-bg) transition-all duration-200 pointer-events-none
+                  peer-focus:-top-3 peer-focus:text-xs peer-valid:-top-3 peer-valid:text-xs">
                   Full Name
                 </label>
               </div>
@@ -173,20 +182,10 @@ const CatalogPage = () => {
                   name="phone"
                   required
                   placeholder="Phone Number"
-                  className="
-                    w-full px-4 py-3 border rounded-lg bg-transparent
-                    outline-none peer placeholder-transparent transition
-                  "
+                  className="w-full px-4 py-3 border rounded-lg bg-transparent outline-none peer placeholder-transparent transition"
                 />
-                <label
-                  className="
-                    absolute left-3 top-6 px-1 text-sm opacity-70 
-                    bg-(--brand-bg)
-                    pointer-events-none transition-all duration-200
-                    peer-focus:-top-3 peer-focus:text-xs peer-focus:opacity-100
-                    peer-valid:-top-3 peer-valid:text-xs
-                  "
-                >
+                <label className="absolute left-3 top-6 px-1 text-sm opacity-70 bg-(--brand-bg) transition-all duration-200 pointer-events-none
+                  peer-focus:-top-3 peer-focus:text-xs peer-valid:-top-3 peer-valid:text-xs">
                   Phone Number
                 </label>
               </div>
@@ -198,20 +197,10 @@ const CatalogPage = () => {
                   name="email"
                   required
                   placeholder="Email Address"
-                  className="
-                    w-full px-4 py-3 border rounded-lg bg-transparent
-                    outline-none peer placeholder-transparent transition
-                  "
+                  className="w-full px-4 py-3 border rounded-lg bg-transparent outline-none peer placeholder-transparent transition"
                 />
-                <label
-                  className="
-                    absolute left-3 top-6 px-1 text-sm opacity-70 
-                    bg-(--brand-bg)
-                    pointer-events-none transition-all duration-200
-                    peer-focus:-top-3 peer-focus:text-xs peer-focus:opacity-100
-                    peer-valid:-top-3 peer-valid:text-xs
-                  "
-                >
+                <label className="absolute left-3 top-6 px-1 text-sm opacity-70 bg-(--brand-bg) transition-all duration-200 pointer-events-none
+                  peer-focus:-top-3 peer-focus:text-xs peer-valid:-top-3 peer-valid:text-xs">
                   Email Address
                 </label>
               </div>
@@ -227,6 +216,7 @@ const CatalogPage = () => {
           </div>
         </div>
       )}
+
     </div>
   );
 };
