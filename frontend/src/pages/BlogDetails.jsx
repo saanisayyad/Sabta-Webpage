@@ -63,10 +63,17 @@ ease of maintenance, and beautiful patterns.
 
       <div className="mt-6">
         <img
-          src={blog.image}
-          alt={blog.title}
-          className="w-full h-72 object-cover rounded-xl shadow-md"
-        />
+  src={blog.image}
+  alt={blog.title}
+  className="
+    w-full 
+    h-72 sm:h-80 md:h-[420px] lg:h-[480px] xl:h-[520px]
+    object-cover 
+    rounded-xl 
+    shadow-md
+  "
+/>
+
 
         <h1 className="text-3xl font-semibold mt-6">{blog.title}</h1>
 
