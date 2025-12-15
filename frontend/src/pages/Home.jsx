@@ -343,21 +343,35 @@ const Home = () => {
         </div>
       </section>
       <section
-      data-aos="fade-up"
-      className="w-full px-6 md:px-12 lg:px-20 py-16"
-    >
-      <div className="w-full aspect-video rounded-xl overflow-hidden border border-(--brand-accent)/40 shadow-lg">
-        <video
-          ref={videoRef}
-          src="/Sabta_Video.mp4"
-          className="w-full h-full object-cover"
-          controls
-          controlsList="nodownload noplaybackrate"
-          disablePictureInPicture
-          onContextMenu={(e) => e.preventDefault()}
-        />
-      </div>
-    </section>
+  data-aos="fade-up"
+  className="w-full px-6 md:px-12 lg:px-20 py-16"
+>
+  <div
+    className="
+      w-full
+      h-[40vh]
+      sm:h-[50vh]
+      md:h-[60vh]
+      lg:h-[70vh]
+      xl:h-[80vh]
+      rounded-xl
+      overflow-hidden
+      border border-(--brand-accent)/40
+      shadow-lg
+    "
+  >
+    <video
+      ref={videoRef}
+      src="/Sabta_Video.mp4"
+      className="w-full h-full object-cover"
+      controls
+      controlsList="nodownload noplaybackrate"
+      disablePictureInPicture
+      onContextMenu={(e) => e.preventDefault()}
+    />
+  </div>
+</section>
+
 
       {/* ✅ GIF SECTION */}
       <section data-aos="fade-up" className="w-full px-6 md:px-12 lg:px-20 py-16">
